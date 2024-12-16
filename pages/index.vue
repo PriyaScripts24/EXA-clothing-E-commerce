@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-poppins">
     <!-- nav... -->
     <Header></Header>
     <!-- bg img... -->
@@ -58,6 +58,7 @@
             :title="item.title"
             :price="item.price"
             :decription="item.decription"
+            :icon="item.icon"
           />
         </div>
       </div>
@@ -75,6 +76,7 @@
             :title="item.title"
             :price="item.price"
             :decription="item.decription"
+            :icon="item.icon"
           />
         </div>
       </div>
@@ -82,7 +84,7 @@
     <!-- section5... -->
     <section>
       <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">Printed Shirts</p>
+        <p class="font-bold text-[35px]">Printed Shorts</p>
         <p class="font-bold text-[17px]">View all</p>
       </div>
       <div class="flex items-center justify-around">
@@ -92,6 +94,7 @@
             :title="item.title"
             :price="item.price"
             :decription="item.decription"
+            :icon="item.icon"
           />
         </div>
       </div>
@@ -120,8 +123,12 @@
                 40% off on our latest New Arrivals
               </p>
             </div>
-            <div class="flex flex-col items-center justify-center mt-5 -ml-[200px]">
-              <p class="text-salte-800 text-[20px] font-serif leading-12 text-[#C85904]">
+            <div
+              class="flex flex-col items-center justify-center mt-5 -ml-[200px]"
+            >
+              <p
+                class="text-salte-800 text-[20px] font-serif leading-12 text-[#C85904]"
+              >
                 {{ date }}
               </p>
               <div class="flex gap-2">
@@ -132,7 +139,6 @@
                 >
                   <p
                     class="text-center font-bold text-[20px] p-3 rounded-sm bg-white text-[#C85904]"
-                    
                   >
                     {{ i }}
                   </p>
@@ -140,7 +146,9 @@
                 </div>
               </div>
             </div>
-            <button class="bg-[#FB8122] text-white px-[120px] p-2 rounded-full mt-6 -ml-[180px]">
+            <button
+              class="bg-[#FB8122] text-white px-[120px] p-2 rounded-full mt-6 -ml-[180px]"
+            >
               BUY NOW
             </button>
           </div>
@@ -148,28 +156,304 @@
       </div>
     </section>
     <!-- section7.. -->
-     <section>
-      <p class="font-serif font-medium text-[44px] text-center mt-4 text-[#FB8122] ">Shop By Fandom</p>
-      <div class="flex gap-3 mt-4">
+    <section>
+      <p
+        class="font-serif font-medium text-[44px] text-center mt-4 text-[#FB8122]"
+      >
+        Shop By Fandom
+      </p>
+      <div class="">
+        <!-- <div class="flex gap-3 mt-4 ">
         <div class="flex flex-col items-center gap-2">
           <img src="/public/game1.png" alt="game" class="w-[700px] h-[340px] -ml-[190px]">
           <img src="/public/letter1.png" alt="letter" class="w-[250px] h-[80px] -ml-[450px]">
         </div>
         <div class="flex flex-col items-center">
-          <img src="/public/game2.png" alt="game" class="w-[1200px] h-[340px] ">
+          <img src="/public/game2.png" alt="game" class="w-[700px] h-[340px] ">
           <img src="/public/letter2.png" alt="letter" class="w-[250px] h-[80px]  ">
         </div>
         <div class="flex flex-col items-center">
           <img src="/public/game3.png" alt="game" class="w-[700px] h-[340px] -mr-[190px]">
           <img src="/public/letter3.png" alt="letter" class="w-[250px] h-[80px] -mr-[450px] ">
         </div>
+      </div> -->
+        <marquee>
+          <div class="flex gap-10">
+            <div class="flex items-center justify-center gap-10">
+              <div>
+                <img
+                  src="/public/game1.png"
+                  alt="game"
+                  class="w-[1600px] h-[340px]"
+                />
+                <img
+                  src="/public/letter1.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px] ml-[100px]"
+                />
+              </div>
+              <div>
+                <img
+                  src="/public/game2.png"
+                  alt="game"
+                  class="w-[1600px] h-[340px]"
+                />
+                <img
+                  src="/public/letter2.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px] ml-[100px]"
+                />
+              </div>
+              <div>
+                <img
+                  src="/public/game3.png"
+                  alt="game"
+                  class="w-[1600px] h-[340px]"
+                /><img
+                  src="/public/letter3.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px] ml-[100px]"
+                />
+              </div>
+            </div>
+            <!-- <div class="flex items-center justify-center gap-10">
+              <div>
+                <img
+                  src="/public/game1.png"
+                  alt="game"
+                  class="w-[300px] h-[340px]"
+                />
+                <img
+                  src="/public/letter1.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px]"
+                />
+              </div>
+              <div>
+                <img
+                  src="/public/game2.png"
+                  alt="game"
+                  class="w-[300px] h-[340px]"
+                />
+                <img
+                  src="/public/letter2.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px]"
+                />
+              </div>
+              <div>
+                <img
+                  src="/public/game3.png"
+                  alt="game"
+                  class="w-[300px] h-[340px]"
+                /><img
+                  src="/public/letter3.png"
+                  alt="letter"
+                  class="w-[250px] h-[80px]"
+                />
+              </div>
+            </div> -->
+          </div>
+        </marquee>
       </div>
-     </section>
+    </section>
+    <!-- section8.. -->
+    <section>
+      <div
+        class="bg-[#FFF1E6] w-full h-[400px] mt-3 flex justify-between items-center p-20"
+      >
+        <div class="flex gap-2 mt-5">
+          <div data-aos="fade-up">
+            <img
+              src="/shirt1.png"
+              alt="shirt"
+              class="w-[220px] h-[250px] mt-24"
+            />
+          </div>
+          <div data-aos="fade-down">
+            <img
+              src="/shirt2.png"
+              alt="shirt"
+              class="w-[220px] h-[250px] mt-6"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col gap-8">
+          <p class="font-bold text-[32px] font-sans leading-6">Get 30% Off</p>
+          <p class="font-medium text-[12px] font-sans">
+            for all new product purchases <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;min purchase Rs : 1500/-
+          </p>
+          <button
+            class="bg-[#FB8122] text-white px-3 p-2 rounded-full text-[16px]"
+          >
+            SHOP NOW
+          </button>
+        </div>
+        <div class="flex gap-2 mt-5">
+          <div data-aos="fade-down">
+            <img
+              src="/shirt3.png"
+              alt="shirt"
+              class="w-[220px] h-[250px] mt-6"
+            />
+          </div>
+          <div data-aos="fade-up">
+            <img
+              src="/shirt4.png"
+              alt="shirt"
+              class="w-[220px] h-[250px] mt-24"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section9.. -->
+    <section>
+      <p
+        class="text-[#FB8122] font-medium text-[42px] text-center font-serif mt-4"
+      >
+        Feedback Corner
+      </p>
+      <div class="flex items-center justify-center gap-10 mt-5">
+        <div
+          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
+        >
+          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+          <p class="text-[#C85904]">Wesly Raj</p>
+          <p>
+            The customer experience was exceptional from start to finish. The
+            website is user-friendly, the checkout process was smooth, and the
+            clothes I ordered fit perfectly. I'm beyond satisfied!
+          </p>
+        </div>
+        <div
+          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6]"
+        >
+          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+          <p class="text-[#C85904]">Victor Raj</p>
+          <p>
+            I absolutely love the quality and style of the clothing I purchased
+            from this website. customer service was outstanding, and I received
+            my order quickly. Highly recommended!
+          </p>
+        </div>
+        <div
+          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
+        >
+          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+          <p class="text-[#C85904]">Jones</p>
+          <p>
+            I had a great experience shopping on this website. The clothes I
+            bought are fashionable and comfortable. Highly satisfied!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- section10.. -->
+    <section>
+      <p class="text-[#FB8122] font-serif text-[42px] text-center mt-10">
+        Pay securely with
+      </p>
+      <marquee>
+        <div class="flex items-center justify-center gap-10 mt-10">
+          <img src="/gpay.png" class="w-[80px] h-[50px]" alt="gpay" />
+          <img src="/phonepe.png" class="w-[80px] h-[50px]" alt="phonepe" />
+          <img src="/paytm.png" class="w-[80px] h-[50px]" alt="paytm" />
+          <img
+            src="/master card.png"
+            class="w-[80px] h-[50px]"
+            alt="mastercard"
+          />
+          <img src="/amazonpay.png" class="w-[80px] h-[50px]" alt="amazonpay" />
+          <img src="/paypal.png" class="w-[80px] h-[50px]" alt="paypal" />
+          <img src="/pay.png" class="w-[80px] h-[50px]" alt="pay" />
+        </div>
+      </marquee>
+    </section>
+    <!-- section11.. -->
+    <section>
+      <div class="bg-[#321601]">
+        <div class="flex flex-col gap-8">
+          <p class="font-bold text-[16px] text-white mt-5">
+            Join our club, get 15% off for your Birthday
+          </p>
+          <div
+            class="flex items-center justify-between border border-white w-[450px] h-[30px] p-3 px-3"
+          >
+            <input
+              type="text"
+              placeholder="Enter Your Email Address"
+              class="text-[#FFFFFF] text-[16px] bg-[#321601]"
+            />
+            <img src="/arrow.png" alt="arrow" class="w-[10px] h-[5px]" />
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" class="w-[20px] h-[20px] mt-3" />
+            <p class="text-white">
+              By Submittng your email, you agree to receive advertising <br />
+              emails from Exa Clothing.
+            </p>
+          </div>
+          <div class="flex gap-6">
+            <img
+              src="/instagram.png"
+              class="w-[20px] h-[20px]"
+              alt="instagram"
+            />
+            <img src="/facebook.png" class="w-[20px] h-[20px]" alt="facebook" />
+            <img
+              src="/pinterest.png"
+              class="w-[20px] h-[20px]"
+              alt="pinterest"
+            />
+            <img src="/behance.png" class="w-[20px] h-[20px]" alt="behance" />
+          </div>
+          <div class="flex gap-2">
+            <img
+              src="/copyright.png"
+              alt="copyright"
+              class="w-[20px] h-[20px]"
+            />
+            <p class="text-white text-[12px]">
+              2024 Exa Clothing. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="font-bold text-white font-sans text-[12px]">
+            <a href="#">Orders Tracking</a>
+            <a href="#">Orders & Shipping</a>
+            <a href="#">Returns & Refunds</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact Us</a>
+            Help & Support
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/scrollbar";
+import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
+
+// import required modules
 import { createDateFormatter } from "intl-dateformat";
 export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data() {
     return {
       arrivals: [
@@ -227,18 +511,21 @@ export default {
           image: "/cart7.png",
           price: "999",
           decription: "Drop Shoulder T-Shirt",
+          icon: "/colors4.png",
         },
         {
           title: "DTF Printed",
           image: "/cart8.png",
           price: "999",
           decription: "Drop Shoulder T-Shirt",
+          icon: "/colors5.png",
         },
         {
           title: "Chobbar White",
           image: "/cart9.png",
           price: "999",
           decription: "Drop Shoulder T-Shirt",
+          icon: "/colors6.png",
         },
       ],
       docus: [
@@ -247,18 +534,21 @@ export default {
           image: "/cart10.png",
           price: "1099",
           decription: "Printed shirt",
+          icon: "/colors4.png",
         },
         {
           title: "Casual Dotted",
           image: "/cart11.png",
           price: "1099",
           decription: "Printed shirt",
+          icon: "/colors5.png",
         },
         {
           title: "Party Wear",
           image: "/cart12.png",
           price: "1099",
           decription: "Printed shirt",
+          icon: "/colors6.png",
         },
       ],
       types: [
@@ -267,25 +557,35 @@ export default {
           image: "/cart13.png",
           price: "399",
           decription: "Printed shorts",
+          icon: "/colors4.png",
         },
         {
           title: "Tropical green",
           image: "/cart14.png",
           price: "399",
           decription: "Printed shorts",
+          icon: "/colors5.png",
         },
         {
           title: "Cargo",
           image: "/cart15.png",
           price: "399",
           decription: "Printed shorts",
+          icon: "/colors6.png",
         },
       ],
       time: "",
       date: "",
     };
   },
+
+  setup() {
+    return {
+      modules: [Autoplay, Pagination, Navigation, Scrollbar],
+    };
+  },
   mounted() {
+    AOS.init();
     const formatDate = createDateFormatter({
       // numeric hour
       h: ({ hour }) => (hour[0] === "0" ? hour[1] : hour),
@@ -300,3 +600,28 @@ export default {
   },
 };
 </script>
+<style>
+.slider {
+  animation: slide-rightToLeft 10s linear infinite;
+}
+
+@keyframes slide-rightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes slide-leftToRight {
+  100% {
+    transform: translateX(0);
+  }
+
+  0% {
+    transform: translateX(-10%);
+  }
+}
+</style>

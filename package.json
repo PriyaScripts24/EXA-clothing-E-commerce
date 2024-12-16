@@ -10,8 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "aos": "3.0.0-beta.6",
+    "google-font": "^1.0.1",
     "intl-dateformat": "^0.1.4",
     "nuxt": "^3.14.1592",
+    "swiper": "^11.1.15",
     "vue": "latest",
     "vue-router": "latest"
   },
