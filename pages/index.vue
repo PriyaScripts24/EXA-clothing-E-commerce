@@ -356,7 +356,7 @@
         Pay securely with
       </p>
       <marquee>
-        <div class="flex items-center justify-center gap-10 mt-10">
+        <div class="flex items-center justify-center gap-20 mt-10">
           <img src="/gpay.png" class="w-[80px] h-[50px]" alt="gpay" />
           <img src="/phonepe.png" class="w-[80px] h-[50px]" alt="phonepe" />
           <img src="/paytm.png" class="w-[80px] h-[50px]" alt="paytm" />
@@ -372,66 +372,7 @@
       </marquee>
     </section>
     <!-- section11.. -->
-    <section>
-      <div class="bg-[#321601]">
-        <div class="flex flex-col gap-8">
-          <p class="font-bold text-[16px] text-white mt-5">
-            Join our club, get 15% off for your Birthday
-          </p>
-          <div
-            class="flex items-center justify-between border border-white w-[450px] h-[30px] p-3 px-3"
-          >
-            <input
-              type="text"
-              placeholder="Enter Your Email Address"
-              class="text-[#FFFFFF] text-[16px] bg-[#321601]"
-            />
-            <img src="/arrow.png" alt="arrow" class="w-[10px] h-[5px]" />
-          </div>
-          <div class="flex gap-2">
-            <input type="checkbox" class="w-[20px] h-[20px] mt-3" />
-            <p class="text-white">
-              By Submittng your email, you agree to receive advertising <br />
-              emails from Exa Clothing.
-            </p>
-          </div>
-          <div class="flex gap-6">
-            <img
-              src="/instagram.png"
-              class="w-[20px] h-[20px]"
-              alt="instagram"
-            />
-            <img src="/facebook.png" class="w-[20px] h-[20px]" alt="facebook" />
-            <img
-              src="/pinterest.png"
-              class="w-[20px] h-[20px]"
-              alt="pinterest"
-            />
-            <img src="/behance.png" class="w-[20px] h-[20px]" alt="behance" />
-          </div>
-          <div class="flex gap-2">
-            <img
-              src="/copyright.png"
-              alt="copyright"
-              class="w-[20px] h-[20px]"
-            />
-            <p class="text-white text-[12px]">
-              2024 Exa Clothing. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-        <div>
-          <p class="font-bold text-white font-sans text-[12px]">
-            <a href="#">Orders Tracking</a>
-            <a href="#">Orders & Shipping</a>
-            <a href="#">Returns & Refunds</a>
-            <a href="#">FAQs</a>
-            <a href="#">Contact Us</a>
-            Help & Support
-          </p>
-        </div>
-      </div>
-    </section>
+    <Footer />
   </div>
 </template>
 <script>
