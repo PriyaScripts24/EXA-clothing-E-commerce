@@ -4,10 +4,10 @@
     <Header></Header>
     <!-- section1.. -->
     <section class="bg-[#FFF1E6]">
-      <div class="p-20 font-poppins">
+      <div class="p-10 mt-4 font-poppins">
         <div class="flex items-center justify-center gap-20 mt-10">
-          <div>
-            <p class="font-bold text-[20px]">Offers</p>
+          <div class="-ml-[20px]">
+            <p class="font-bold text-[20px] text-center">Offers</p>
             <div class="flex gap-10 mt-10">
               <div class="flex flex-col gap-5">
                 <a href="#">Oversized T-Shirt</a>
@@ -21,29 +21,29 @@
               </div>
             </div>
           </div>
-          <div class="flex gap-10">
+          <div class="flex gap-10 ml-[60px] -mt-3">
             <div>
               <img
                 src="/sale1.png"
                 alt="sale"
                 class="w-[250px] h-[380px]rounded-tl-2xl"
               />
-              <div class="bg-white rounded-b-2xl">
-                <p>front Printed T-Shirt</p>
-                <p>UPTO 20%</p>
+              <div class="p-2 bg-white rounded-b-2xl">
+                <p class="text-[12px] text-center">front Printed T-Shirt</p>
+                <p class="font-bold text-center">UPTO 20%</p>
               </div>
             </div>
-            <div class="pt-20">
+            <div class="">
               <div class="">
+                <div class="p-2 bg-white rounded-t-2xl">
+                  <p class="text-[12px] text-center">front Printed T-Shirt</p>
+                  <p class="font-bold text-center">UPTO 20%</p>
+                </div>
                 <img
-                  src="/sale1.png"
+                  src="/sale2.png"
                   alt="sale"
                   class="w-[250px] h-[380px]rounded-tl-2xl"
                 />
-                <div class="bg-white rounded-b-2xl">
-                  <p>front Printed T-Shirt</p>
-                  <p>UPTO 20%</p>
-                </div>
               </div>
             </div>
           </div>

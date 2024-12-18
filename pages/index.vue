@@ -163,98 +163,80 @@
         Shop By Fandom
       </p>
       <div class="">
-        <!-- <div class="flex gap-3 mt-4 ">
-        <div class="flex flex-col items-center gap-2">
-          <img src="/public/game1.png" alt="game" class="w-[700px] h-[340px] -ml-[190px]">
-          <img src="/public/letter1.png" alt="letter" class="w-[250px] h-[80px] -ml-[450px]">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="/public/game2.png" alt="game" class="w-[700px] h-[340px] ">
-          <img src="/public/letter2.png" alt="letter" class="w-[250px] h-[80px]  ">
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="/public/game3.png" alt="game" class="w-[700px] h-[340px] -mr-[190px]">
-          <img src="/public/letter3.png" alt="letter" class="w-[250px] h-[80px] -mr-[450px] ">
-        </div>
-      </div> -->
-        <marquee>
-          <div class="flex gap-10">
-            <div class="flex items-center justify-center gap-10">
-              <div>
-                <img
-                  src="/public/game1.png"
-                  alt="game"
-                  class="w-[1600px] h-[340px]"
-                />
-                <img
-                  src="/public/letter1.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px] ml-[100px]"
-                />
-              </div>
-              <div>
-                <img
-                  src="/public/game2.png"
-                  alt="game"
-                  class="w-[1600px] h-[340px]"
-                />
-                <img
-                  src="/public/letter2.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px] ml-[100px]"
-                />
-              </div>
-              <div>
-                <img
-                  src="/public/game3.png"
-                  alt="game"
-                  class="w-[1600px] h-[340px]"
-                /><img
-                  src="/public/letter3.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px] ml-[100px]"
-                />
-              </div>
-            </div>
-            <!-- <div class="flex items-center justify-center gap-10">
-              <div>
-                <img
-                  src="/public/game1.png"
-                  alt="game"
-                  class="w-[300px] h-[340px]"
-                />
-                <img
-                  src="/public/letter1.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px]"
-                />
-              </div>
-              <div>
-                <img
-                  src="/public/game2.png"
-                  alt="game"
-                  class="w-[300px] h-[340px]"
-                />
-                <img
-                  src="/public/letter2.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px]"
-                />
-              </div>
-              <div>
-                <img
-                  src="/public/game3.png"
-                  alt="game"
-                  class="w-[300px] h-[340px]"
-                /><img
-                  src="/public/letter3.png"
-                  alt="letter"
-                  class="w-[250px] h-[80px]"
-                />
-              </div>
-            </div> -->
+        <div class="flex gap-10 slider">
+          <!-- <div class="flex items-center justify-center gap-10"> -->
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game1.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            />
+            <img
+              src="/public/letter1.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
           </div>
-        </marquee>
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game2.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            />
+            <img
+              src="/public/letter2.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
+          </div>
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game3.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            /><img
+              src="/public/letter3.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
+          </div>
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game1.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            />
+            <img
+              src="/public/letter1.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
+          </div>
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game2.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            />
+            <img
+              src="/public/letter2.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
+          </div>
+          <div class="flex flex-col items-center justify-center flex-none">
+            <img
+              src="/public/game3.png"
+              alt="game"
+              class="w-[350px] h-[340px]"
+            /><img
+              src="/public/letter3.png"
+              alt="letter"
+              class="w-[250px] h-[80px]"
+            />
+          </div>
+        </div>
+        <!-- </div> -->
       </div>
     </section>
     <!-- section8.. -->
@@ -309,46 +291,65 @@
       </div>
     </section>
     <!-- section9.. -->
-    <section>
+    <section class="px-20">
       <p
         class="text-[#FB8122] font-medium text-[42px] text-center font-serif mt-4"
       >
         Feedback Corner
       </p>
-      <div class="flex items-center justify-center gap-10 mt-5">
-        <div
-          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
-        >
-          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-          <p class="text-[#C85904]">Wesly Raj</p>
-          <p>
-            The customer experience was exceptional from start to finish. The
-            website is user-friendly, the checkout process was smooth, and the
-            clothes I ordered fit perfectly. I'm beyond satisfied!
-          </p>
-        </div>
-        <div
-          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6]"
-        >
-          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-          <p class="text-[#C85904]">Victor Raj</p>
-          <p>
-            I absolutely love the quality and style of the clothing I purchased
-            from this website. customer service was outstanding, and I received
-            my order quickly. Highly recommended!
-          </p>
-        </div>
-        <div
-          class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
-        >
-          <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-          <p class="text-[#C85904]">Jones</p>
-          <p>
-            I had a great experience shopping on this website. The clothes I
-            bought are fashionable and comfortable. Highly satisfied!
-          </p>
-        </div>
-      </div>
+      <!-- <div class="flex items-center justify-center gap-10 mt-5"> -->
+
+      <swiper
+        :slidesPerView="3"
+        :spaceBetween="30"
+        :loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <div
+            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
+          >
+            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+            <p class="text-[#C85904]">Wesly Raj</p>
+            <p>
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6]"
+          >
+            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+            <p class="text-[#C85904]">Victor Raj</p>
+            <p>
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
+          >
+            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
+            <p class="text-[#C85904]">Jones</p>
+            <p>
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <!-- </div> -->
+      </swiper>
     </section>
     <!-- section10.. -->
     <section>
@@ -547,22 +548,12 @@ export default {
 }
 
 @keyframes slide-rightToLeft {
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
-    transform: translateX(10%);
-  }
-}
-
-@keyframes slide-leftToRight {
-  100% {
-    transform: translateX(0);
-  }
-
-  0% {
-    transform: translateX(-10%);
+  to {
+    transform: translateX(-50%);
   }
 }
 </style>
