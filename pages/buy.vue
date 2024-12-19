@@ -23,7 +23,7 @@
     </section>
     <!-- section3.. -->
     <section>
-      <div class="flex gap-8 px-8 mt-8">
+      <div class="flex gap-6 px-8 mt-8">
         <div class="gap-3 h-[510px] overflow-hidden overflow-y-auto">
           <div v-for="(image, index) in productImages" :key="index">
             <img
@@ -52,7 +52,7 @@
           <div class="flex items-center justify-between">
             <div class="flex flex-col gap-3">
               <p class="font-medium text-[16px]">colors</p>
-              <img src="/colors5.png" alt="colors" class="w-[190px] h-[20px]" />
+              <img src="/colors5.png" alt="colors" class="w-[190px] h-[15px]" />
             </div>
             <div>
               <p class="font-[400px] text-[14px] text-[#868686] mt-[100px]">
@@ -92,12 +92,7 @@
 export default {
   data() {
     return {
-      productImages: [
-        "/buy_pages.png",
-        "/background2.png",
-        "/buy_pages.png",
-        "/background2.png",
-      ],
+      productImages: ["/buy1.png", "/buy2.png", "/buy3.png", "/buy4.png"],
       selectIndex: 0,
     };
   },
