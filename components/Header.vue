@@ -31,12 +31,12 @@
             >Product</a
           >
           <a
-            href="about"
+            href="/about"
             class="font-medium md:text-[18px] text-[10px] text-[#321601]"
             >About us</a
           >
           <a
-            href="#"
+            href="/contact"
             class="font-medium md:text-[18px] text-[10px] text-[#321601]"
             >Contact</a
           >
