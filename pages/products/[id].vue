@@ -42,7 +42,7 @@
         />
         <div class="flex flex-col gap-8">
           <p class="font-bold text-[28px] font-sans">
-            BASIC BLACK Heavyweight T-shirt
+            {{ product.name }}
           </p>
           <p class="font-[400px] text-[14px] font-sans">
             Basically, Flex. Presenting basic heavyweight T-Shirt with a round,
@@ -171,11 +171,14 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       productImages: ["/buy1.png", "/buy2.png", "/buy3.png", "/buy4.png"],
       selectIndex: 0,
+      product: {},
       buys: [
         {
           title: "Chobbar green ",
@@ -208,9 +211,16 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.getProduct();
+  },
   methods: {
     changeImage(index) {
       this.selectIndex = index;
+    },
+    async getProduct() {
+      const response = await axios.get(`/api/products/${useRoute().params.id}`);
+      this.product = response.data.product;
     },
   },
 };

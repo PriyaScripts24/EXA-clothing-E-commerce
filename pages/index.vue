@@ -15,15 +15,17 @@
         <p class="font-bold text-[17px]">View all</p>
       </div>
       <div class="flex items-center justify-around">
-        <div v-for="item in arrivals" :key="item">
-          <Card
-            :image="item.image"
-            :title="item.title"
-            :price="item.price"
-            :decription="item.decription"
-            :icon="item.icon"
-            :button="item.button"
-          />
+        <div v-for="(item, index) in arrivals" :key="index">
+          <NuxtLink :to="`/products/${index + 1}`">
+            <Card
+              :image="item.image"
+              :title="item.title"
+              :price="item.price"
+              :decription="item.decription"
+              :icon="item.icon"
+              :button="item.button"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -35,13 +37,15 @@
       </div>
       <div class="flex items-center justify-around">
         <div v-for="item in items" :key="item">
-          <Card
-            :image="item.image"
-            :title="item.title"
-            :price="item.price"
-            :decription="item.decription"
-            :icon="item.icon"
-          />
+          <NuxtLink to="/buy">
+            <Card
+              :image="item.image"
+              :title="item.title"
+              :price="item.price"
+              :decription="item.decription"
+              :icon="item.icon"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -158,11 +162,11 @@
     <!-- section7.. -->
     <section>
       <p
-        class="font-serif font-medium text-[44px] text-center mt-4 text-[#FB8122]"
+        class="font-serif font-medium text-[44px] overflow- text-center mt-4 text-[#FB8122]"
       >
         Shop By Fandom
       </p>
-      <div class="">
+      <div class="overflow-x-auto scroll-">
         <div class="flex gap-10 slider">
           <!-- <div class="flex items-center justify-center gap-10"> -->
           <div class="flex flex-col items-center justify-center flex-none">
@@ -543,6 +547,16 @@ export default {
 };
 </script>
 <style>
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none; /* Hides the scrollbar */
+  -ms-overflow-style: none; /* For Internet Explorer */
+}
 .slider {
   animation: slide-rightToLeft 10s linear infinite;
 }
