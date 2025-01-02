@@ -1,5 +1,5 @@
 <template>
-  <div class="font-poppins">
+  <div class="overflow-auto font-poppins">
     <!-- nav... -->
     <Header></Header>
     <!-- bg img... -->
@@ -36,8 +36,8 @@
         <p class="font-bold text-[17px]">View all</p>
       </div>
       <div class="flex items-center justify-around">
-        <div v-for="item in items" :key="item">
-          <NuxtLink to="/buy">
+        <div v-for="(item, index) in oversize" :key="index">
+          <NuxtLink :to="`/products/${index + 1}`">
             <Card
               :image="item.image"
               :title="item.title"
@@ -428,7 +428,7 @@ export default {
           button: "New",
         },
       ],
-      items: [
+      oversize: [
         {
           title: "Travis",
           image: "/cart4.png",

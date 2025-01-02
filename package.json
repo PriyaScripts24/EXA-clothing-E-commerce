@@ -15,6 +15,7 @@
     "axios": "^1.7.9",
     "google-font": "^1.0.1",
     "intl-dateformat": "^0.1.4",
+    "notivue": "^2.4.5",
     "nuxt": "^3.14.1592",
     "swiper": "^11.1.15",
     "vue": "latest",

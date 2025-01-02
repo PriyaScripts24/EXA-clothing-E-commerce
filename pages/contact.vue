@@ -42,23 +42,27 @@
         >
           <div class="flex gap-20">
             <input
+              v-model="formData.name"
               type="text"
               placeholder="First Name"
               class="border border-black p-1 text-gray-600 w-[420px]"
             />
             <input
+              v-model="formData.name"
               type="text"
               placeholder="Last Name"
               class="border border-black p-1 text-gray-600 w-[420px]"
             />
           </div>
           <input
+            v-model="formData.email"
             type="text"
             placeholder="Enter Your Email Address"
             class="border border-black p-1 text-gray-600 w-[920px]"
           />
           <div>
             <textarea
+              v-model="formData.email"
               name=""
               id=""
               cols="30"
@@ -70,6 +74,7 @@
         </div>
         <button
           class="bg-[#FB8122] rounded-full p-2 text-white px-9 mt-8 ml-[305px]"
+          @click="submit()"
         >
           Submit
         </button>
@@ -133,3 +138,40 @@
     </section>
   </div>
 </template>
+
+<script>
+import { Notivue, Notification, push } from "notivue";
+export default {
+  data() {
+    return {
+      formData: {
+        name: "",
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    submit() {
+      try {
+        console.log(this.formData.name === "");
+        if (this.formData.name === "") {
+          push.error("Please Eenter your name");
+          return;
+        }
+        if (!this.formData.email) {
+          push.error("enter your email");
+          return;
+        }
+        if (!this.formData.email) {
+          push.error("entry correct email id");
+          return;
+        }
+        push.success("successfully Done");
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  },
+};
+</script>
