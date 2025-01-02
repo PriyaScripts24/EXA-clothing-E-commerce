@@ -1,26 +1,26 @@
 export const products= [
     {
       id: "1",
-      name: "shirt 1",
-      images: [],
-      price: "200",
+      name: "Kakashi Hatake",
+      images: ["/cart1.png","/cart3.png","/cart3.png","/cart3.png"],
+      price: "699",
     },
     {
       id: "2",
-      name: "shirt 2",
-      images: [],
+      name: "Demon Inside",
+      images: ["/cart2.png"],
       price: "200",
     },
     {
       id: "3",
-      name: "shirt 3",
-      images: [],
+      name: "Itachi Uchika",
+      images: ["/cart3.png"],
       price: "200",
     },
     {
       id: "4",
       name: "shirt 4",
-      images: [],
+      images: ["/cart4.png"],
       price: "200",
     },
   ]

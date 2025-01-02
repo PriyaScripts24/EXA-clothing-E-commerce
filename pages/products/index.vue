@@ -12,11 +12,7 @@
         <div class="flex items-center justify-center gap-20 px-8 mt-10">
           <div v-for="item in products" :key="item">
             <nuxtLink :to="`/products/${item.id}`">
-              <img
-                src="/product1.png"
-                alt="product"
-                class="w-[280px] h-[390px]"
-              />
+              <img :src="item.images[0]" class="w-[280px] h-[390px]" />
               <p class="font-bold text-[18px] mt-1">{{ item.name }}</p>
             </nuxtLink>
           </div>

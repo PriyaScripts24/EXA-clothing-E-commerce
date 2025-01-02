@@ -22,10 +22,15 @@
       </div>
     </section>
     <!-- section3.. -->
-    <section>
+    <section class="flex justify-center" v-if="product.name === undefined">
+      <div
+        class="w-10 h-10 border-4 border-orange-600 rounded-full animate-spin border-r-gray-200"
+      ></div>
+    </section>
+    <section v-else>
       <div class="flex gap-6 px-8 mt-8">
         <div class="gap-3 h-[510px] overflow-hidden overflow-y-auto">
-          <div v-for="(image, index) in productImages" :key="index">
+          <div v-for="(image, index) in product.images" :key="index">
             <img
               @click="changeImage(index)"
               :src="image"
@@ -36,7 +41,7 @@
           </div>
         </div>
         <img
-          :src="productImages[selectIndex]"
+          :src="product.images[selectIndex]"
           alt="buy"
           class="w-[450px] h-[510px]"
         />
@@ -52,7 +57,11 @@
           <div class="flex items-center justify-between">
             <div class="flex flex-col gap-3">
               <p class="font-medium text-[16px]">colors</p>
-              <img src="/colors5.png" alt="colors" class="w-[190px] h-[15px]" />
+              <img
+                src="public/colors5.png"
+                alt="colors"
+                class="w-[190px] h-[15px]"
+              />
             </div>
             <div>
               <p class="font-[400px] text-[14px] text-[#868686] mt-[100px]">
@@ -66,7 +75,7 @@
             >
               <p class="font-bold text-[12px]">Size</p>
               <img
-                src="/arrowbutton.png"
+                src="public/arrowbutton.png"
                 alt="arrow"
                 class="w-[25px] h-[25px]"
               />
@@ -85,13 +94,17 @@
           </div>
           <div class="flex items-center justify-between">
             <div class="flex gap-3">
-              <img src="/van.png" alt="van" class="w-[30px] h-[20px]" />
+              <img src="public/van.png" alt="van" class="w-[30px] h-[20px]" />
               <p class="text-[#868686] font-[400px] text-[14px] font-sans">
                 Easy Return
               </p>
             </div>
             <div class="flex gap-3">
-              <img src="/like icon.png" alt="like" class="w-[20px] h-[20px]" />
+              <img
+                src="public/like icon.png"
+                alt="like"
+                class="w-[20px] h-[20px]"
+              />
               <p class="text-[#868686] font-[400px] text-[14px] font-sans">
                 Add To Wish List
               </p>
@@ -176,7 +189,6 @@ import axios from "axios";
 export default {
   data() {
     return {
-      productImages: ["/buy1.png", "/buy2.png", "/buy3.png", "/buy4.png"],
       selectIndex: 0,
       product: {},
       buys: [
@@ -211,7 +223,7 @@ export default {
       ],
     };
   },
-  mounted() {
+  async mounted() {
     this.getProduct();
   },
   methods: {

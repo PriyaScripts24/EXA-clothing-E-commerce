@@ -44,19 +44,41 @@
         <div class="hidden gap-3 md:flex">
           <img src="/profile.png" alt="profile" class="w-[38px] h-[38px]" />
           <div class="relative">
-            <img
-              src="/card.png"
-              alt="card"
-              class="bg-[#FB8122] rounded-full text-white w-[40px] h-[40px] p-2"
-            />
-            <p
-              class="absolute px-1 text-white bg-black rounded-full -top-2 left-7"
-            >
-              0
-            </p>
+            <NuxtLink to="/addtocart">
+              <img
+                src="/card.png"
+                alt="card"
+                class="bg-[#FB8122] rounded-full text-white w-[40px] h-[40px] p-2"
+              />
+              <p
+                class="absolute px-1 text-white bg-black rounded-full -top-2 left-7"
+              >
+                {{ cart.length }}
+              </p>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </section>
   </div>
 </template>
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      cart: [],
+    };
+  },
+  mounted() {
+    this.getCart();
+  },
+  methods: {
+    async getCart() {
+      const response = await axios.get("/api/cart");
+      this.cart = response.data.cart;
+    },
+  },
+};
+</script>
