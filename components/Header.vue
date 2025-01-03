@@ -174,13 +174,13 @@
         <div class="relative">
           <button
             @click="closeForm()"
-            class="absolute flex justify-center w-8 h-8 text-white bg-red-500 rounded-full -top-2 -left-2"
+            class="absolute flex justify-center w-8 h-8 text-center text-white bg-red-500 rounded-full -top-2 -left-2"
           >
             X
           </button>
 
           <div
-            class="z-10 max-w-4xl max-h-full p-8 mx-auto overflow-auto bg-white rounded-lg shadow-lg"
+            class="z-10 max-w-6xl max-h-full p-8 mx-auto overflow-auto bg-white rounded-lg shadow-lg"
           >
             <div class="flex flex-col gap-5">
               <div class="gap-2 text-black/60">
@@ -207,7 +207,7 @@
                 <p class="font-bold">Password :</p>
                 <input
                   v-model="formData.password"
-                  type="text"
+                  type="password"
                   name=""
                   placeholder="8-Digit Number"
                   class="px-3 py-1 border border-black/45"
@@ -215,7 +215,7 @@
               </div>
             </div>
             <button
-              class="w-[180px] px-4 py-2 font-bold bg-orange-500 hover:bg-orange-800 mt-2"
+              class="w-[180px] px-4 py-2 font-bold bg-orange-500 hover:bg-orange-800 mt-5 rounded-2xl ml-3"
               @click="submit()"
             >
               submit
