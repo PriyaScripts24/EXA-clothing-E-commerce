@@ -4,8 +4,7 @@ export default defineEventHandler((event)=>{
     let product={}
     const {id}= getRouterParams(event)
     for (let item of products){
-        if(item.id===id){
-            
+        if(item.id===id){  
             return {success:true,product:item}
         }
     }

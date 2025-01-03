@@ -82,6 +82,7 @@
             </button>
             <button
               class="flex items-center justify-center p-2 px-4 mt-3 bg-[#FEE2CD] rounded-3xl drop-shadow-lg"
+              @click="addToCart()"
             >
               <p class="font-bold text-[12px]">Add To Cart</p>
               <p>₹699</p>
@@ -233,6 +234,11 @@ export default {
     async getProduct() {
       const response = await axios.get(`/api/products/${useRoute().params.id}`);
       this.product = response.data.product;
+    },
+    async addToCart() {
+      const response = await axios.post(`/api/cart/add`, {
+        id: useRoute().params.id,
+      });
     },
   },
 };

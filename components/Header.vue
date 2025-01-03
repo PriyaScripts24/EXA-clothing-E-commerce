@@ -101,6 +101,7 @@
                       src="public/Trash.png"
                       alt="trash"
                       class="w-[18px] h-[18px] mt-4"
+                      @click="deleteCart(item.id)"
                     />
                   </div>
                 </div>
@@ -116,9 +117,19 @@
                     <div
                       class="flex border border-[#DDDBDC] p-2 w-[70px] h-[50px] gap-3"
                     >
-                      <p class="text-[20px]">-</p>
+                      <p
+                        class="text-[20px]"
+                        @click="updatedCart(item.id, item.quantity - 1)"
+                      >
+                        -
+                      </p>
                       <p class="text-[20px]">{{ item.quantity }}</p>
-                      <p class="text-[20px]">+</p>
+                      <p
+                        class="text-[20px]"
+                        @click="updatedCart(item.id, item.quantity + 1)"
+                      >
+                        +
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -195,6 +206,21 @@ export default {
         price += parseInt(e.price.toString()) * e.quantity;
       }
       return price;
+    },
+    async updatedCart(id, quantity) {
+      console.log(id);
+      const response = await axios.post(`/api/cart/updated`, {
+        id,
+        quantity,
+      });
+      this.getCart();
+    },
+    async deleteCart(id) {
+      console.log(id);
+      const response = await axios.post(`/api/cart/delete`, {
+        id,
+      });
+      this.getCart();
     },
   },
 };
