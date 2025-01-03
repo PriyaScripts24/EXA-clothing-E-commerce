@@ -197,7 +197,7 @@
                 <p class="font-bold">E-mail :</p>
                 <input
                   v-model="formData.email"
-                  type="text"
+                  type="emails"
                   name=""
                   placeholder="@gamil.com"
                   class="px-3 py-1 border border-black/45"
