@@ -42,7 +42,12 @@
           >
         </nav>
         <div class="gap-3 md:flex">
-          <img src="/profile.png" alt="profile" class="w-[38px] h-[38px]" />
+          <img
+            src="/profile.png"
+            alt="profile"
+            class="w-[38px] h-[38px]"
+            @click="closeForm()"
+          />
           <div class="relative">
             <div @click="openForm()">
               <img
@@ -160,6 +165,65 @@
         </div>
       </div>
     </div>
+    <div>
+      <div
+        v-if="signform"
+        class="fixed inset-0 z-50 flex items-center justify-center"
+      >
+        <div class="fixed inset-0 bg-black opacity-50"></div>
+        <div class="relative">
+          <button
+            @click="closeForm()"
+            class="absolute flex justify-center w-8 h-8 text-white bg-red-500 rounded-full -top-2 -left-2"
+          >
+            X
+          </button>
+
+          <div
+            class="z-10 max-w-4xl max-h-full p-8 mx-auto overflow-auto bg-white rounded-lg shadow-lg"
+          >
+            <div class="flex flex-col gap-5">
+              <div class="gap-2 text-black/60">
+                <p class="font-bold">Name :</p>
+                <input
+                  v-model="formData.name"
+                  type="text"
+                  name=""
+                  placeholder="Entry your name"
+                  class="px-3 py-1 border border-black/45"
+                />
+              </div>
+              <div class="gap-2 text-black/60">
+                <p class="font-bold">E-mail :</p>
+                <input
+                  v-model="formData.email"
+                  type="text"
+                  name=""
+                  placeholder="@gamil.com"
+                  class="px-3 py-1 border border-black/45"
+                />
+              </div>
+              <div class="gap-2 text-black/60">
+                <p class="font-bold">Password :</p>
+                <input
+                  v-model="formData.password"
+                  type="text"
+                  name=""
+                  placeholder="8-Digit Number"
+                  class="px-3 py-1 border border-black/45"
+                />
+              </div>
+            </div>
+            <button
+              class="w-[180px] px-4 py-2 font-bold bg-orange-500 hover:bg-orange-800 mt-2"
+              @click="submit()"
+            >
+              submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -172,6 +236,13 @@ export default {
       push,
       applyform: true,
       entryform: false,
+      signform: false,
+
+      formData: {
+        name: "",
+        email: "",
+        password: "",
+      },
     };
   },
   mounted() {
@@ -193,6 +264,31 @@ export default {
         document.body.classList.remove("no-scroll");
       }
     },
+    closeForm() {
+      this.signform = !this.signform;
+      if (this.signform) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    },
+    submit() {
+      console.log(this.formData.name === "");
+      if (this.formData.name === "") {
+        push.error("enter your name");
+        return;
+      }
+      if (!this.formData.email) {
+        push.error("enter your email");
+        return;
+      }
+      if (!this.formData.password) {
+        push.error("entry correct password");
+        return;
+      }
+      push.success("successfully Done");
+    },
+
     getTotalQuantity() {
       let quantity = 0;
       for (let e of this.cart) {

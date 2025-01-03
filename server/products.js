@@ -1,6 +1,6 @@
 export const products= [
-    {
-      id: "1",
+{
+          id: "1",
       name: "Kakashi Hatake",
       images: ["/product1.png","/cart2.png","/cart3.png","/cart1.png"],
       price: "699",
