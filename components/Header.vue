@@ -14,34 +14,48 @@
           alt="logo"
           class="w-[60px] h-[60px] hidden md:block"
         />
-        <nav class="flex gap-6 md:gap-16">
-          <a
-            href="/"
-            class="font-medium md:text-[18px] text-[10px] text-[#FB8122]"
-            >Home</a
-          >
-          <a
-            href="/sales"
-            class="font-medium md:text-[18px] text-[10px] text-[#321601]"
-            >Sale</a
-          >
-          <a
-            href="/products"
-            class="font-medium md:text-[18px] text-[10px] text-[#321601]"
-            >Product</a
-          >
-          <a
-            href="/about"
-            class="font-medium md:text-[18px] text-[10px] text-[#321601]"
-            >About us</a
-          >
-          <a
-            href="/contact"
-            class="font-medium md:text-[18px] text-[10px] text-[#321601]"
-            >Contact</a
-          >
-        </nav>
-        <div class="gap-3 md:flex">
+        <div id="app">
+          <header :class="{ sticky: isSticky }">
+            <div id="menu-icon" :class="{ 'bx-x': isMenuOpen }">
+              <img
+                src="/menu.png"
+                alt="menu"
+                class="w-[80px] h[80px] md:hidden block"
+                @click="toggleMenu"
+              />
+              <div class="hidden md:block">
+                <nav class="flex gap-6 md:gap-16">
+                  <a
+                    href="/"
+                    class="font-medium md:text-[18px] text-[10px] text-[#FB8122]"
+                    >Home</a
+                  >
+                  <a
+                    href="/sales"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    >Sale</a
+                  >
+                  <a
+                    href="/products"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    >Product</a
+                  >
+                  <a
+                    href="/about"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    >About us</a
+                  >
+                  <a
+                    href="/contact"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    >Contact</a
+                  >
+                </nav>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="flex gap-3">
           <img
             src="/profile.png"
             alt="profile"
@@ -62,6 +76,15 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-6" :class="isMenuOpen ? 'block' : 'hidden'">
+        <div v-for="(item, index) in nav" :key="index">
+          <NuxtLink :to="item.path">
+            <h1 :class="getRoute(item.path) ? 'text-red-600' : ''">
+              {{ item.name }}
+            </h1>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -237,21 +260,36 @@ export default {
       applyform: true,
       entryform: false,
       signform: false,
-
+      nav: [
+        { name: "Home", path: "/" },
+        { name: "Products", path: "/products" },
+      ],
       formData: {
         name: "",
         email: "",
         password: "",
       },
+      isSticky: false,
+      isMenuOpen: false,
     };
   },
   mounted() {
+    console.log(
+      "/products".replace("/", "").split("/")[0],
+      useRoute().fullPath.replace("/", "").split("/")[0]
+    );
     this.getCart();
+    window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
     document.body.classList.remove("no-scroll");
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    getRoute(route) {
+      const path = useRoute().fullPath.replace("/", "").split("/")[0];
+      return path === route.replace("/", "").split("/")[0];
+    },
     async getCart() {
       const response = await axios.get("/api/cart");
       this.cart = response.data.cart;
@@ -317,6 +355,12 @@ export default {
         id,
       });
       this.getCart();
+    },
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    handleScroll() {
+      this.isSticky = window.scrollY > 0;
     },
   },
 };
