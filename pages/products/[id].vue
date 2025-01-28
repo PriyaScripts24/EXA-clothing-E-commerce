@@ -7,7 +7,9 @@
     <!-- section2.. -->
     <section class="py-3">
       <div class="py-1 bg-[#190B00] opacity-60">
-        <div class="flex slider gap-5 text-white w-full h-[30px]">
+        <div
+          class="flex slider gap-5 text-white w-full md:h-[30px] h-[15px] md:text-[20px] text-[12px]"
+        >
           <p class="flex flex-none">Christmas offer 15% off</p>
           <p class="flex flex-none">Christmas offer 15% off</p>
           <p class="flex flex-none">Christmas offer 15% off</p>
@@ -22,20 +24,20 @@
       </div>
     </section>
     <!-- section3.. -->
-    <section class="flex justify-center" v-if="product.name === undefined">
+    <section class="justify-center md:flex" v-if="product.name === undefined">
       <div
-        class="w-10 h-10 border-4 border-orange-600 rounded-full animate-spin border-r-gray-200"
+        class="border-4 border-orange-600 rounded-full md:w-10 md:h-10 animate-spin border-r-gray-200"
       ></div>
     </section>
     <section v-else>
-      <div class="flex gap-6 px-8 mt-8">
+      <div class="gap-6 px-8 mt-8 md:flex">
         <div class="gap-3 h-[510px] overflow-hidden overflow-y-auto">
           <div v-for="(image, index) in product.images" :key="index">
             <img
               @click="changeImage(index)"
               :src="image"
               alt="buy1"
-              class="w-[125px] py-2 h-[160px]"
+              class="md:w-[125px] w-[80px] py-2 md:h-[160px] h-[100px]"
               :class="index === selectIndex ? 'opacity-100' : 'opacity-40'"
             />
           </div>
@@ -43,10 +45,12 @@
         <img
           :src="product.images[selectIndex]"
           alt="buy"
-          class="w-[450px] h-[510px]"
+          class="md:w-[450px] md:h-[510px] w-[200px] h-[300px] -mt-[470px] ml-[125px] md:-mt-0 md:ml-0"
         />
         <div class="flex flex-col gap-8">
-          <p class="font-bold text-[28px] font-sans">
+          <p
+            class="font-bold md:text-[28px] text-[20px] font-sans ml-[140px] md:mt-0 mt-1 md:ml-0"
+          >
             {{ product.name }}
           </p>
           <p class="font-[400px] text-[14px] font-sans">
@@ -165,7 +169,7 @@
         <p class="font-bold text-[32px] font-sans text-center mt-4">
           You May Also Like
         </p>
-        <div class="flex items-center justify-around px-20">
+        <div class="items-center justify-around px-20 md:flex">
           <div v-for="item in buys" :key="item">
             <Card
               :image="item.image"

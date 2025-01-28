@@ -5,16 +5,20 @@
     <!-- bg img... -->
     <section>
       <div>
-        <img src="/background.png" alt="background" class="w-full mt-4" />
+        <img
+          src="/background.png"
+          alt="background"
+          class="w-full mt-1 md:mt-4 h-[180px] md:h-[600px]"
+        />
       </div>
     </section>
     <!-- section1... -->
     <section>
-      <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">New Arrivals</p>
-        <p class="font-bold text-[17px]">View all</p>
+      <div class="flex items-center justify-between px-4 mt-2 md:px-16">
+        <p class="font-bold md:text-[35px] text-[24px]">New Arrivals</p>
+        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
-      <div class="flex items-center justify-around">
+      <div class="items-center px-12 md:justify-around md:flex md:px-0">
         <div v-for="(item, index) in arrivals" :key="index">
           <NuxtLink :to="`/products/${index + 1}`">
             <Card
@@ -31,11 +35,11 @@
     </section>
     <!-- section2 -->
     <section>
-      <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">Oversize T-shirt</p>
-        <p class="font-bold text-[17px]">View all</p>
+      <div class="flex items-center justify-between px-4 mt-2 md:px-16">
+        <p class="font-bold md:text-[35px] text-[24px]">Oversize T-shirt</p>
+        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
-      <div class="flex items-center justify-around">
+      <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="(item, index) in oversize" :key="index">
           <NuxtLink :to="`/products/${index + 1}`">
             <Card
@@ -51,11 +55,13 @@
     </section>
     <!-- section3 -->
     <section>
-      <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">Drop Shoulder T-Shirt</p>
-        <p class="font-bold text-[17px]">View all</p>
+      <div class="flex items-center justify-between px-4 mt-2 md:px-16">
+        <p class="font-bold md:text-[35px] text-[24px]">
+          Drop Shoulder T-Shirt
+        </p>
+        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
-      <div class="flex items-center justify-around">
+      <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="item in products" :key="item">
           <Card
             :image="item.image"
@@ -69,11 +75,11 @@
     </section>
     <!-- section4... -->
     <section>
-      <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">Printed Shirts</p>
-        <p class="font-bold text-[17px]">View all</p>
+      <div class="flex items-center justify-between px-4 mt-2 md:px-16">
+        <p class="font-bold md:text-[35px] text-[24px]">Printed Shirts</p>
+        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
-      <div class="flex items-center justify-around">
+      <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="item in docus" :key="item">
           <Card
             :image="item.image"
@@ -87,11 +93,11 @@
     </section>
     <!-- section5... -->
     <section>
-      <div class="flex items-center justify-between px-16 mt-2">
-        <p class="font-bold text-[35px]">Printed Shorts</p>
-        <p class="font-bold text-[17px]">View all</p>
+      <div class="flex items-center justify-between px-4 mt-2 md:px-16">
+        <p class="font-bold md:text-[35px] text-[24px]">Printed Shorts</p>
+        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
-      <div class="flex items-center justify-around">
+      <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="item in types" :key="item">
           <Card
             :image="item.image"
@@ -106,32 +112,38 @@
     <!-- section6.. -->
     <section>
       <div
-        class="flex items-center justify-around mt-14 bg-[#FFF1E6] w-[1270px] h-[370px] ml-[130px] rounded-2xl"
+        class="flex items-center justify-around mt-14 bg-[#FFF1E6] md:w-[1270px] md:h-[370px] w-[370px] h-[600px] md:ml-[130px] rounded-2xl"
       >
-        <div class="flex px-5 mt-[20px] text-center">
+        <div class="md:flex px-5 md:mt-[20px] text-center mt-[5px]">
           <img
             src="/public/background2.png"
             alt="background"
-            class="w-[380px] h-[320px] ml-[10px]"
+            class="md:w-[380px] md:h-[320px] md:ml-[10px] w-[210px] h-[180px] ml-[60px]"
           />
-          <div class="px-10 ml-[200px]">
-            <p class="text-[#C85904] font-serif text-[40px] -ml-[520px]">
+          <div class="px-10 md:ml-[200px]">
+            <p
+              class="text-[#C85904] font-serif md:text-[40px] text-[24px] md:-ml-[520px]"
+            >
               Exclusive offer
             </p>
             <div class="mt-8">
-              <p class="-ml-[200px] text-[#C85904]">
+              <p
+                class="md:-ml-[200px] text-[#C85904] md:text-[20px] text-[14px]"
+              >
                 Unlock the ultimate style upgrade with our exclusive offer Enjoy
                 savings of up to
               </p>
-              <p class="-ml-[520px] text-[#C85904]">
+              <p
+                class="md:-ml-[520px] text-[#C85904] md:text-[18px] text-[12px]"
+              >
                 40% off on our latest New Arrivals
               </p>
             </div>
             <div
-              class="flex flex-col items-center justify-center mt-5 -ml-[200px]"
+              class="flex flex-col items-center justify-center mt-5 md:-ml-[200px]"
             >
               <p
-                class="text-salte-800 text-[20px] font-serif leading-12 text-[#C85904]"
+                class="text-salte-800 md:text-[20px] text-[16px] font-serif leading-12 text-[#C85904]"
               >
                 {{ date }}
               </p>
@@ -142,7 +154,7 @@
                   class="flex items-center gap-2 mt-3"
                 >
                   <p
-                    class="text-center font-bold text-[20px] p-3 rounded-sm bg-white text-[#C85904]"
+                    class="text-center font-bold md:text-[20px] p-3 rounded-sm bg-white text-[#C85904]"
                   >
                     {{ i }}
                   </p>
@@ -151,7 +163,7 @@
               </div>
             </div>
             <button
-              class="bg-[#FB8122] text-white px-[120px] p-2 rounded-full mt-6 -ml-[180px]"
+              class="bg-[#FB8122] text-white md:px-[120px] px-10 p-2 rounded-full mt-6 md:-ml-[180px]"
             >
               BUY NOW
             </button>
@@ -162,7 +174,7 @@
     <!-- section7.. -->
     <section>
       <p
-        class="font-serif font-medium text-[44px] overflow- text-center mt-4 text-[#FB8122]"
+        class="font-serif font-medium md:text-[44px] text-[24px] overflow- text-center mt-4 text-[#FB8122]"
       >
         Shop By Fandom
       </p>
@@ -173,70 +185,70 @@
             <img
               src="/public/game1.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             />
             <img
               src="/public/letter1.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
           <div class="flex flex-col items-center justify-center flex-none">
             <img
               src="/public/game2.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             />
             <img
               src="/public/letter2.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
           <div class="flex flex-col items-center justify-center flex-none">
             <img
               src="/public/game3.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             /><img
               src="/public/letter3.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
           <div class="flex flex-col items-center justify-center flex-none">
             <img
               src="/public/game1.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             />
             <img
               src="/public/letter1.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
           <div class="flex flex-col items-center justify-center flex-none">
             <img
               src="/public/game2.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             />
             <img
               src="/public/letter2.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
           <div class="flex flex-col items-center justify-center flex-none">
             <img
               src="/public/game3.png"
               alt="game"
-              class="w-[350px] h-[340px]"
+              class="md:w-[350px] md:h-[340px] w-[240px] h-[230px]"
             /><img
               src="/public/letter3.png"
               alt="letter"
-              class="w-[250px] h-[80px]"
+              class="md:w-[250px] md:h-[80px] w-[160px] h-[50px]"
             />
           </div>
         </div>
@@ -246,58 +258,60 @@
     <!-- section8.. -->
     <section>
       <div
-        class="bg-[#FFF1E6] w-full h-[400px] mt-3 flex justify-between items-center p-20"
+        class="bg-[#FFF1E6] w-full md:h-[400px] h-[560px] mt-3 md:flex md:justify-between items-center md:p-20 text-center p-10"
       >
-        <div class="flex gap-2 mt-5">
+        <div class="flex -mt-5 md:gap-2 md:mt-5">
           <div data-aos="fade-up">
             <img
               src="/shirt1.png"
               alt="shirt"
-              class="w-[220px] h-[250px] mt-24"
+              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-24"
             />
           </div>
           <div data-aos="fade-down">
             <img
               src="/shirt2.png"
               alt="shirt"
-              class="w-[220px] h-[250px] mt-6"
+              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-6"
             />
           </div>
         </div>
-        <div class="flex flex-col gap-8">
-          <p class="font-bold text-[32px] font-sans leading-6">Get 30% Off</p>
-          <p class="font-medium text-[12px] font-sans">
+        <div class="mt-5 ml-3 md:flex-col md:flex md:gap-8 md:ml-0">
+          <p class="font-bold md:text-[32px] text-[18px] font-sans leading-6">
+            Get 30% Off
+          </p>
+          <p class="font-medium md:text-[12px] text-[8px] font-sans mt-4">
             for all new product purchases <br />
             &nbsp;&nbsp;&nbsp;&nbsp;min purchase Rs : 1500/-
           </p>
           <button
-            class="bg-[#FB8122] text-white px-3 p-2 rounded-full text-[16px]"
+            class="bg-[#FB8122] text-white px-3 p-2 rounded-full md:text-[16px] text-[10px] mt-5"
           >
-            SHOP NOW
+            Show Now
           </button>
         </div>
-        <div class="flex gap-2 mt-5">
+        <div class="flex md:gap-2 md:mt-5">
           <div data-aos="fade-down">
             <img
               src="/shirt3.png"
               alt="shirt"
-              class="w-[220px] h-[250px] mt-6"
+              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-6"
             />
           </div>
           <div data-aos="fade-up">
             <img
               src="/shirt4.png"
               alt="shirt"
-              class="w-[220px] h-[250px] mt-24"
+              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-24"
             />
           </div>
         </div>
       </div>
     </section>
     <!-- section9.. -->
-    <section class="px-20">
+    <section class="px-3 md:px-20">
       <p
-        class="text-[#FB8122] font-medium text-[42px] text-center font-serif mt-4"
+        class="text-[#FB8122] font-medium md:text-[42px] text-[24px] text-center font-serif mt-4"
       >
         Feedback Corner
       </p>
@@ -314,65 +328,106 @@
         :modules="modules"
         class="mySwiper"
       >
-        <swiper-slide>
-          <div
-            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
-          >
-            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-            <p class="text-[#C85904]">Wesly Raj</p>
-            <p>
-              The customer experience was exceptional from start to finish. The
-              website is user-friendly, the checkout process was smooth, and the
-              clothes I ordered fit perfectly. I'm beyond satisfied!
-            </p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div
-            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6]"
-          >
-            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-            <p class="text-[#C85904]">Victor Raj</p>
-            <p>
-              I absolutely love the quality and style of the clothing I
-              purchased from this website. customer service was outstanding, and
-              I received my order quickly. Highly recommended!
-            </p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div
-            class="w-[420px] h-[230px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col"
-          >
-            <img src="/comma.png" alt="camma" class="w-[20px] h-[20px]" />
-            <p class="text-[#C85904]">Jones</p>
-            <p>
-              I had a great experience shopping on this website. The clothes I
-              bought are fashionable and comfortable. Highly satisfied!
-            </p>
-          </div>
-        </swiper-slide>
-        <!-- </div> -->
+        <div class="md:flex">
+          <swiper-slide>
+            <div
+              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+            >
+              <img
+                src="/comma.png"
+                alt="camma"
+                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+              />
+              <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+              <p class="md:text-[16px] text-[12px]">
+                The customer experience was exceptional from start to finish.
+                The website is user-friendly, the checkout process was smooth,
+                and the clothes I ordered fit perfectly. I'm beyond satisfied!
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div
+              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] mt-3 md:mt-0 border"
+            >
+              <img
+                src="/comma.png"
+                alt="camma"
+                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+              />
+              <p class="text-[#C85904] md:text-[16px] text-[12px]">
+                Victor Raj
+              </p>
+              <p class="md:text-[16px] text-[12px]">
+                I absolutely love the quality and style of the clothing I
+                purchased from this website. customer service was outstanding,
+                and I received my order quickly. Highly recommended!
+              </p>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div
+              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col md:mt-0 mt-2 border"
+            >
+              <img
+                src="/comma.png"
+                alt="camma"
+                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+              />
+              <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+              <p class="md:text-[16px] text-[12px]">
+                I had a great experience shopping on this website. The clothes I
+                bought are fashionable and comfortable. Highly satisfied!
+              </p>
+            </div>
+          </swiper-slide>
+        </div>
       </swiper>
     </section>
     <!-- section10.. -->
     <section>
-      <p class="text-[#FB8122] font-serif text-[42px] text-center mt-10">
+      <p
+        class="text-[#FB8122] font-serif md:text-[42px] text-[24px] text-center mt-10"
+      >
         Pay securely with
       </p>
       <marquee>
-        <div class="flex items-center justify-center gap-20 mt-10">
-          <img src="/gpay.png" class="w-[80px] h-[50px]" alt="gpay" />
-          <img src="/phonepe.png" class="w-[80px] h-[50px]" alt="phonepe" />
-          <img src="/paytm.png" class="w-[80px] h-[50px]" alt="paytm" />
+        <div class="flex items-center justify-center gap-10 mt-10 md:gap-20">
+          <img
+            src="/gpay.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="gpay"
+          />
+          <img
+            src="/phonepe.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="phonepe"
+          />
+          <img
+            src="/paytm.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="paytm"
+          />
           <img
             src="/master card.png"
-            class="w-[80px] h-[50px]"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="mastercard"
           />
-          <img src="/amazonpay.png" class="w-[80px] h-[50px]" alt="amazonpay" />
-          <img src="/paypal.png" class="w-[80px] h-[50px]" alt="paypal" />
-          <img src="/pay.png" class="w-[80px] h-[50px]" alt="pay" />
+          <img
+            src="/amazonpay.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="amazonpay"
+          />
+          <img
+            src="/paypal.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="paypal"
+          />
+          <img
+            src="/pay.png"
+            class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
+            alt="pay"
+          />
         </div>
       </marquee>
     </section>

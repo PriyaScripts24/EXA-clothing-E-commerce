@@ -8,7 +8,9 @@
           Enjoy Free Shipping On All Orders
         </p>
       </div>
-      <div class="flex items-center justify-around mt-4">
+      <div
+        class="flex items-center justify-between px-3 mt-2 md:justify-around md:mt-4"
+      >
         <img
           src="/logo.png"
           alt="logo"
@@ -20,34 +22,34 @@
               <img
                 src="/menu.png"
                 alt="menu"
-                class="w-[80px] h[80px] md:hidden block"
+                class="w-[40px] h[40px] md:hidden block"
                 @click="toggleMenu"
               />
               <div class="hidden md:block">
                 <nav class="flex gap-6 md:gap-16">
                   <a
                     href="/"
-                    class="font-medium md:text-[18px] text-[10px] text-[#FB8122]"
+                    class="font-medium md:text-[18px] text-[10px] text-[#FB8122] hover:text-[#321601]"
                     >Home</a
                   >
                   <a
                     href="/sales"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
                     >Sale</a
                   >
                   <a
                     href="/products"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
                     >Product</a
                   >
                   <a
                     href="/about"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
                     >About us</a
                   >
                   <a
                     href="/contact"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601]"
+                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
                     >Contact</a
                   >
                 </nav>
@@ -59,7 +61,7 @@
           <img
             src="/profile.png"
             alt="profile"
-            class="w-[38px] h-[38px]"
+            class="md:w-[38px] md:h-[38px] w-[24px] h-[24px]"
             @click="closeForm()"
           />
           <div class="relative">
@@ -67,10 +69,10 @@
               <img
                 src="/card.png"
                 alt="card"
-                class="bg-[#FB8122] rounded-full text-white w-[40px] h-[40px] p-2"
+                class="bg-[#FB8122] rounded-full text-white md:w-[40px] md:h-[40px] w-[24px] h-[24px] md:p-2 p-1"
               />
               <p
-                class="absolute px-1 text-white bg-black rounded-full -top-2 left-7"
+                class="absolute text-white bg-black rounded-full md:px-1 -top-2 md:left-7 px-0.5 left-4 text-xs md:text-lg"
               >
                 {{ cart.length }}
               </p>
@@ -78,7 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-6" :class="isMenuOpen ? 'block' : 'hidden'">
+      <div class="flex flex-col gap-3" :class="isMenuOpen ? 'block' : 'hidden'">
         <div v-for="(item, index) in nav" :key="index">
           <NuxtLink :to="item.path">
             <h1 :class="getRoute(item.path) ? 'text-red-600' : ''">
@@ -94,33 +96,43 @@
     >
       <div class="fixed inset-0 bg-black opacity-50"></div>
       <div
-        class="z-10 max-w-4xl max-h-full p-8 mx-auto overflow-auto bg-white rounded-lg shadow-lg"
+        class="z-10 max-w-4xl max-h-full p-5 mx-auto overflow-auto bg-white rounded-lg shadow-lg md:p-8"
       >
-        <div class="w-[477px] h-[700px] bg-white flex flex-col gap-4">
+        <div
+          class="md:w-[477px] md:h-[700px] w-[275px] h-[330px] bg-white flex flex-col md:gap-4 gap-3"
+        >
           <img
             src="public/multi.png"
             alt="multiple"
-            class="w-[25px] h-[25px] right-0"
+            class="md:w-[25px] md:h-[25px] w-[15px] h-[15px] right-0"
             @click="openForm()"
           />
-          <p class="font-bold text-[24px] px-4">Your Cart</p>
+          <p class="font-bold md:text-[24px] text-[18px] px-4">Your Cart</p>
           <div v-if="cart.length <= 0">
-            <p>cart is empty</p>
+            <p class="text-[12px] md:text-[20px]">cart is empty</p>
           </div>
           <div v-else>
-            <div class="flex gap-6 px-4" v-for="item in cart" :key="item">
+            <div
+              class="flex gap-5 px-4 md:gap-6"
+              v-for="item in cart"
+              :key="item"
+            >
               <img
                 :src="item.images[0]"
                 alt="buy"
-                class="w-[175px] h-[150px]"
+                class="md:w-[175px] md:h-[150px] w-[80px] h-[80px]"
               />
-              <div class="flex flex-col gap-5">
-                <div class="flex items-center justify-between gap-8 px-6">
+              <div class="flex flex-col gap-6 md:gap-5">
+                <div
+                  class="flex items-center justify-between gap-6 px-6 md:gap-8"
+                >
                   <div>
-                    <p class="font-[400px] text-[16px]">
+                    <p class="font-[400px] md:text-[16px] text-[12px]">
                       {{ item.name }}
                     </p>
-                    <p class="text-[#737373] font-[400px] text-[14px]">
+                    <p
+                      class="text-[#737373] font-[400px] md:text-[14px] text-[12px]"
+                    >
                       Medium | Black
                     </p>
                   </div>
@@ -128,32 +140,42 @@
                     <img
                       src="public/Trash.png"
                       alt="trash"
-                      class="w-[18px] h-[18px] mt-4"
+                      class="md:w-[18px] md:h-[18px] w-[12px] h-[12px] mt-4"
                       @click="deleteCart(item.id)"
                     />
                   </div>
                 </div>
-                <div class="flex items-center justify-between gap-24 px-6">
+                <div
+                  class="flex items-center justify-between gap-8 px-6 md:gap-24"
+                >
                   <div>
                     <div class="flex">
-                      <p class="text-[#737373] line-through">999</p>
-                      <p>₹{{ item.price }}</p>
+                      <p
+                        class="text-[#737373] line-through text-[12px] md:text[16px]"
+                      >
+                        999
+                      </p>
+                      <p class="text-[12px] md:text[16px]">₹{{ item.price }}</p>
                     </div>
-                    <p class="text-[#FB8122]">(10% Off)</p>
+                    <p class="text-[#FB8122] text-[12px] md:text[16px]">
+                      (10% Off)
+                    </p>
                   </div>
                   <div>
                     <div
-                      class="flex border border-[#DDDBDC] p-2 w-[70px] h-[50px] gap-3"
+                      class="flex border border-[#DDDBDC] p-2 md:w-[70px] md:h-[50px] w-[55px] h-[30px] gap-3"
                     >
                       <p
-                        class="text-[20px]"
+                        class="md:text-[20px] text-[12px]"
                         @click="updatedCart(item.id, item.quantity - 1)"
                       >
                         -
                       </p>
-                      <p class="text-[20px]">{{ item.quantity }}</p>
+                      <p class="md:text-[20px] text-[12px]">
+                        {{ item.quantity }}
+                      </p>
                       <p
-                        class="text-[20px]"
+                        class="md:text-[20px] text[12px] -mt-1"
                         @click="updatedCart(item.id, item.quantity + 1)"
                       >
                         +
@@ -165,23 +187,25 @@
             </div>
           </div>
           <div
-            class="mt-[150px] flex flex-col gap-4 px-4 border border-white shadow-white"
+            class="md:mt-[150px] flex flex-col gap-4 px-4 border border-white shadow-white mt-12"
           >
             <div class="flex items-center justify-between">
-              <p class="font-[400px] text-[16px]">
+              <p class="font-[400px] md:text-[16px] text-[12px]">
                 Subtotal
-                <span class="font-[400px] text-[14px]"
+                <span class="font-[400px] md:text-[14px] text-[12px]"
                   >({{ getTotalQuantity() }} items)</span
                 >
               </p>
-              <p class="font-[400px] text-[16px]">{{ getTotalPrice() }}/-</p>
+              <p class="font-[400px] md:text-[16px] text-[12px]">
+                {{ getTotalPrice() }}/-
+              </p>
             </div>
             <button
-              class="bg-black text-white font-[400px] text-[14px] p-2 text-center"
+              class="bg-black text-white font-[400px] md:text-[14px] text-[12px] p-2 text-center rounded-md"
             >
               CONTINUE TO CHECKOUT
             </button>
-            <p class="font-[400px] text-[12px] text-center">
+            <p class="font-[400px] md:text-[12px] text-[10px] text-center">
               Get it now before it sells out.
             </p>
           </div>
@@ -262,7 +286,10 @@ export default {
       signform: false,
       nav: [
         { name: "Home", path: "/" },
+        { name: "Sales", path: "/sales" },
         { name: "Products", path: "/products" },
+        { name: "About Us", path: "/About Us" },
+        { name: "Contact", path: "/Contact" },
       ],
       formData: {
         name: "",
