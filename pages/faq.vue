@@ -10,7 +10,7 @@
           FAQs
         </p>
         <div class="flex gap-3 px-20 mt-4">
-          <p class="text-[#FB8122] text-[16px] font-[400px]">Home</p>
+          <a href="/" class="text-[#FB8122] text-[16px] font-[400px]">Home</a>
           <p class="text-[16px] font-[400px]">/</p>
           <p class="text-[16px] font-[400px]">FAQs</p>
         </div>

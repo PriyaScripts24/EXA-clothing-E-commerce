@@ -68,12 +68,12 @@
               />
             </div>
             <div>
-              <p class="font-[400px] text-[14px] text-[#868686] mt-[100px]">
+              <p class="font-[400px] text-[14px] text-[#868686] md:mt-[100px]">
                 size guide
               </p>
             </div>
           </div>
-          <div class="flex flex-col w-full">
+          <div class="flex flex-col w-full -mt-2 md:-mt-0">
             <button
               class="flex items-center justify-between p-2 px-4 mt-3 bg-white rounded-3xl drop-shadow-lg"
             >
@@ -99,8 +99,14 @@
           </div>
           <div class="flex items-center justify-between">
             <div class="flex gap-3">
-              <img src="public/van.png" alt="van" class="w-[30px] h-[20px]" />
-              <p class="text-[#868686] font-[400px] text-[14px] font-sans">
+              <img
+                src="public/van.png"
+                alt="van"
+                class="md:w-[30px] md:h-[20px] w-[20px] h-[14px]"
+              />
+              <p
+                class="text-[#868686] font-[400px] md:text-[14px] text-[10px] font-sans"
+              >
                 Easy Return
               </p>
             </div>
@@ -108,9 +114,11 @@
               <img
                 src="public/like icon.png"
                 alt="like"
-                class="w-[20px] h-[20px]"
+                class="md:w-[20px] md:h-[20px] w-[20px] h-[16px]"
               />
-              <p class="text-[#868686] font-[400px] text-[14px] font-sans">
+              <p
+                class="text-[#868686] font-[400px] md:text-[14px] text-[10px] font-sans"
+              >
                 Add To Wish List
               </p>
             </div>
@@ -120,7 +128,35 @@
     </section>
     <!-- section4.. -->
     <section>
-      <div class="px-20 mt-8 border border-[#CBCBCB] bg-[#FFF1E6] p-3">
+      <div class="p-6 mt-8 bg-orange-50">
+        <div
+          v-for="(item, index) in faqItems"
+          :key="index"
+          class="py-4 border-b border-gray-300"
+        >
+          <button
+            class="flex justify-between w-full font-bold text-left text-gray-800"
+            @click="toggle(index)"
+          >
+            <span :class="{ 'text-orange-600': item.open }">{{
+              item.title
+            }}</span>
+            <span class="text-orange-600">{{ item.open ? "-" : "+" }}</span>
+          </button>
+          <div v-if="item.open" class="mt-2 text-gray-700">
+            <p v-for="(line, i) in item.content" :key="i">{{ line }}</p>
+          </div>
+        </div>
+        <div class="flex justify-center mt-2">
+          <a
+            href="/Faq"
+            class="text-[16px] font-semibold text-center mt-4 w-[120px] p-2 bg-orange-600 text-white rounded-3xl"
+          >
+            View More</a
+          >
+        </div>
+      </div>
+      <!-- <div class="px-20 mt-8 border border-[#CBCBCB] bg-[#FFF1E6] p-3">
         <div>
           <div class="flex items-center justify-between">
             <p class="font-bold text-[20px]">Fitting</p>
@@ -161,15 +197,19 @@
             or exchanges.
           </p>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- section5.. -->
     <section>
       <div>
-        <p class="font-bold text-[32px] font-sans text-center mt-4">
+        <p
+          class="font-bold md:text-[32px] text-[22px] font-sans text-center mt-4"
+        >
           You May Also Like
         </p>
-        <div class="items-center justify-around px-20 md:flex">
+        <div
+          class="items-center justify-around px-20 md:flex -ml-[30px] md:-ml-0"
+        >
           <div v-for="item in buys" :key="item">
             <Card
               :image="item.image"
@@ -226,6 +266,27 @@ export default {
           icon: "/colors4.png",
         },
       ],
+      faqItems: [
+        {
+          title: "Fabric & Care",
+          content: [
+            "Fabric: Pure Cotton",
+            "Made in Tirupur-Tamil Nadu, 100% Pure Cotton - 210 GSM",
+            "Care: Cold machine wash, line dry",
+            "Do not tumble dry or dry clean, Do not use bleach or fabric softener",
+          ],
+          open: false,
+        },
+        {
+          title: "Shipping And Return",
+          content: [
+            "Shipping: Free in Tamil Nadu, All India orders are 50Rs extra",
+            "Returns: Unwashed, unworn items are eligible for returns or exchanges within 30 days of purchase.",
+            "Final Sale items are not eligible for returns or exchanges.",
+          ],
+          open: false,
+        },
+      ],
     };
   },
   async mounted() {
@@ -244,6 +305,9 @@ export default {
         id: useRoute().params.id,
       });
     },
+    toggle(index) {
+      this.faqItems[index].open = !this.faqItems[index].open;
+    },
   },
 };
 </script>
@@ -260,5 +324,10 @@ export default {
   to {
     transform: translateX(-50%);
   }
+}
+</style>
+<style scoped>
+button {
+  transition: color 0.3s ease;
 }
 </style>

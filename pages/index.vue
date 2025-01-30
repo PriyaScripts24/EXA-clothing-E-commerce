@@ -112,7 +112,7 @@
     <!-- section6.. -->
     <section>
       <div
-        class="flex items-center justify-around mt-14 bg-[#FFF1E6] md:w-[1270px] md:h-[370px] w-[370px] h-[600px] md:ml-[130px] rounded-2xl"
+        class="flex items-center justify-around mt-14 bg-[#FFF1E6] md:w-[1270px] md:h-[370px] w-[370px] h-[600px] md:ml-[70px] rounded-2xl"
       >
         <div class="md:flex px-5 md:mt-[20px] text-center mt-[5px]">
           <img
@@ -315,7 +315,6 @@
       >
         Feedback Corner
       </p>
-      <!-- <div class="flex items-center justify-center gap-10 mt-5"> -->
 
       <swiper
         :slidesPerView="3"
@@ -328,60 +327,56 @@
         :modules="modules"
         class="mySwiper"
       >
-        <div class="md:flex">
-          <swiper-slide>
-            <div
-              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
-            >
-              <img
-                src="/comma.png"
-                alt="camma"
-                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
-              />
-              <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
-              <p class="md:text-[16px] text-[12px]">
-                The customer experience was exceptional from start to finish.
-                The website is user-friendly, the checkout process was smooth,
-                and the clothes I ordered fit perfectly. I'm beyond satisfied!
-              </p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div
-              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] mt-3 md:mt-0 border"
-            >
-              <img
-                src="/comma.png"
-                alt="camma"
-                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
-              />
-              <p class="text-[#C85904] md:text-[16px] text-[12px]">
-                Victor Raj
-              </p>
-              <p class="md:text-[16px] text-[12px]">
-                I absolutely love the quality and style of the clothing I
-                purchased from this website. customer service was outstanding,
-                and I received my order quickly. Highly recommended!
-              </p>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div
-              class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col md:mt-0 mt-2 border"
-            >
-              <img
-                src="/comma.png"
-                alt="camma"
-                class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
-              />
-              <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
-              <p class="md:text-[16px] text-[12px]">
-                I had a great experience shopping on this website. The clothes I
-                bought are fashionable and comfortable. Highly satisfied!
-              </p>
-            </div>
-          </swiper-slide>
-        </div>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] md:mt-0 mt-3 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Victor Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col mt-2 md:mt-0 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+            <p class="md:text-[16px] text-[12px]">
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
       </swiper>
     </section>
     <!-- section10.. -->
@@ -394,37 +389,37 @@
       <marquee>
         <div class="flex items-center justify-center gap-10 mt-10 md:gap-20">
           <img
-            src="/gpay.png"
+            src="public/gpay.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="gpay"
           />
           <img
-            src="/phonepe.png"
+            src="public/phonepe.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="phonepe"
           />
           <img
-            src="/paytm.png"
+            src="public/paytm.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="paytm"
           />
           <img
-            src="/master card.png"
+            src="public/master card.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="mastercard"
           />
           <img
-            src="/amazonpay.png"
+            src="public/amazonpay.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="amazonpay"
           />
           <img
-            src="/paypal.png"
+            src="public/paypal.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="paypal"
           />
           <img
-            src="/pay.png"
+            src="public/pay.png"
             class="md:w-[80px] md:h-[50px] w-[50px] h-[40px]"
             alt="pay"
           />

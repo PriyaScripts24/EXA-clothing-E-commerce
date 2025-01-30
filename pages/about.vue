@@ -5,20 +5,22 @@
     <!-- section1.. -->
     <section>
       <div
-        class="bg-[#FFF1E6] flex gap-20 justify-center items-center mt-10 -px-[20px]"
+        class="bg-[#FFF1E6] md:flex gap-20 justify-center items-center md:mt-10 mt-4 -px-[20px]"
       >
         <img
           src="/review1.png"
           alt="review"
-          class="w-[380px] h-[480px] -ml-[20px]"
+          class="md:w-[380px] md:h-[480px] w-[260px] h-[320px] md:-ml-[20px] ml-[60px] rounded-md"
         />
-        <div class="w-[630px] flex flex-col gap-5">
-          <p class="font-medium text-[12px]">About our Brand</p>
-          <p class="font-semibold text-[20px]">
+        <div class="md:w-[630px] flex flex-col gap-5">
+          <p class="font-medium text-[12px] ml-[150px] md:ml-4 mt-2 md:mt-0">
+            About our Brand
+          </p>
+          <p class="font-semibold md:text-[20px] text-[16px] px-4">
             Fashion that Speaks <br />
             Your Style
           </p>
-          <p class="font-medium text-[12px]">
+          <p class="font-medium text-[12px] px-5 text-justify">
             Exa Clothing is a premier e-commerce platform based in Tamil Nadu,
             dedicated to bringing the latest in fashion trends and high-quality
             clothing to your doorstep. We offer a wide variety of stylish and
@@ -40,37 +42,47 @@
     <!-- sectin2.. -->
     <section>
       <div
-        class="bg-[#FFF1E6] flex gap-16 justify-center items-center mt-2 -px-[20px]"
+        class="bg-[#FFF1E6] md:flex gap-16 justify-center items-center -px-[20px]"
       >
-        <div class="w-[630px] flex flex-col gap-5">
-          <p class="font-medium text-[12px]">OUR QUALITY</p>
-          <p class="font-semibold text-[20px]">
+        <div class="md:w-[630px] flex flex-col gap-5">
+          <p class="font-medium text-[12px] ml-5 mt-4 md:ml-0 md:mt-0">
+            OUR QUALITY
+          </p>
+          <p
+            class="font-semibold md:text-[20px] text-[16px] ml-5 md:ml-0 -mt-3 md:-mt-0"
+          >
             Designed<br />
             to last.
           </p>
-          <p class="font-medium text-[12px]">
+          <p class="font-medium text-[12px] px-5 md:px-0 md:-mt-0 -mt-2">
             Premium fabrics and meticulous craftsmanship in every piece.
           </p>
         </div>
         <img
-          src="/review2.png"
+          src="public/review2.png"
           alt="review"
-          class="w-[480px] h-[360px] -ml-[20px]"
+          class="md:w-[480px] md:h-[380px] w-[290px] h-[320px] md:-ml-[20px] ml-[45px] rounded-md mt-6 md:mt-0"
         />
       </div>
     </section>
     <!-- section3.. -->
     <section>
-      <div class="relative mt-1">
-        <img src="/bg2.png" class="w-full h-[290px]" alt="bg" />
+      <div class="relative mt-4 md:mt-1">
+        <img
+          src="public/bg2.png"
+          class="w-full md:h-[290px] h-[120px]"
+          alt="bg"
+        />
       </div>
-      <div class="absolute -mt-[150px] ml-[520px] flex flex-col gap-3">
-        <p class="font-medium text-[32px] text-center">
+      <div
+        class="absolute md:-mt-[150px] md:ml-[520px] -mt-[90px] ml-[90px] flex flex-col gap-3"
+      >
+        <p class="font-medium md:text-[32px] text-[14px] text-center">
           Follow us on social for more
         </p>
         <div class="flex items-center justify-center">
           <button
-            class="bg-[#FB8122] text-white p-2 px-7 rounded-md text-center"
+            class="bg-[#FB8122] text-white p-2 md:px-7 px-4 rounded-md text-center md:text-[18px] text-[12px]"
           >
             @Exa Clothing Instagram
           </button>
@@ -80,22 +92,42 @@
     <!-- section4.. -->
     <section>
       <div class="flex flex-col items-center justify-center gap-3 mt-5">
-        <p class="font-bold text-[36px]">Useful pages</p>
-        <p class="font-[400px] text-[18px] mt-6">
+        <p class="font-bold md:text-[36px] text-[20px]">Useful pages</p>
+        <p class="font-[400px] md:text-[18px] text-[12px] md:mt-6 px-5 md:px-0">
           Please read through our FAQ (Frequently Asked Questions) and Terms of
           Service page before you contact our customer team.
         </p>
 
-        <p>Delivery cost and duration: Delivery Information</p>
-        <p>Order status: Track your order</p>
-        <p>Know More About Returns and Refunds Policy</p>
-        <br /><br />
-        <p>
+        <p
+          class="font-[400px] md:text-[18px] text-[12px] md:mt-2 -ml-[76px] md:-ml-0"
+        >
+          Delivery cost and duration: Delivery Information
+        </p>
+        <p
+          class="font-[400px] md:text-[18px] text-[12px] md:mt-2 -ml-[166px] md:-ml-0"
+        >
+          Order status: Track your order
+        </p>
+        <p
+          class="font-[400px] md:text-[18px] text-[12px] md:mt-2 -ml-[76px] md:-ml-0"
+        >
+          Know More About Returns and Refunds Policy
+        </p>
+        <br />
+        <p class="font-[400px] md:text-[18px] text-[12px] md:mt-4 px-5 md:px-0">
           To reach our customer service team, please use one of the following
           methods:
         </p>
-        <p>Phone: +91 7418520963</p>
-        <p>Email: customercare@Exacolthing.com</p>
+        <p
+          class="font-[400px] md:text-[18px] text-[12px] md:mt-2 -ml-[196px] md:-ml-0"
+        >
+          Phone: +91 7418520963
+        </p>
+        <p
+          class="font-[400px] md:text-[18px] text-[12px] md:mt-2 -ml-[126px] md:-ml-0"
+        >
+          Email: customercare@Exacolthing.com
+        </p>
       </div>
     </section>
     <!-- section5.. -->

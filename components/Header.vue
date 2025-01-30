@@ -288,7 +288,7 @@ export default {
         { name: "Home", path: "/" },
         { name: "Sales", path: "/sales" },
         { name: "Products", path: "/products" },
-        { name: "About Us", path: "/About Us" },
+        { name: "About Us", path: "/About" },
         { name: "Contact", path: "/Contact" },
       ],
       formData: {
