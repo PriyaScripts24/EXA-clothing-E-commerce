@@ -10,7 +10,7 @@
           Our Products
         </p>
         <div
-          class="items-center justify-center gap-20 px-8 mt-10 ml-12 text-center md:flex md:ml-0"
+          class="flex-wrap items-center justify-center gap-40 px-8 mt-10 ml-12 text-center md:flex md:ml-0"
         >
           <div v-for="item in products" :key="item">
             <nuxtLink :to="`/products/${item.id}`">

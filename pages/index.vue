@@ -62,14 +62,16 @@
         <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
-        <div v-for="item in products" :key="item">
-          <Card
-            :image="item.image"
-            :title="item.title"
-            :price="item.price"
-            :decription="item.decription"
-            :icon="item.icon"
-          />
+        <div v-for="(item, index) in products" :key="index">
+          <NuxtLink :to="`/products/${index + 1}`">
+            <Card
+              :image="item.image"
+              :title="item.title"
+              :price="item.price"
+              :decription="item.decription"
+              :icon="item.icon"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -80,14 +82,16 @@
         <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
-        <div v-for="item in docus" :key="item">
-          <Card
-            :image="item.image"
-            :title="item.title"
-            :price="item.price"
-            :decription="item.decription"
-            :icon="item.icon"
-          />
+        <div v-for="(item, index) in docus" :key="index">
+          <NuxtLink :to="`/products/${index + 1}`">
+            <Card
+              :image="item.image"
+              :title="item.title"
+              :price="item.price"
+              :decription="item.decription"
+              :icon="item.icon"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -98,21 +102,23 @@
         <p class="font-bold md:text-[17px] text-[10px]">View all</p>
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
-        <div v-for="item in types" :key="item">
-          <Card
-            :image="item.image"
-            :title="item.title"
-            :price="item.price"
-            :decription="item.decription"
-            :icon="item.icon"
-          />
+        <div v-for="(item, index) in types" :key="index">
+          <NuxtLink :to="`/products/${index + 1}`">
+            <Card
+              :image="item.image"
+              :title="item.title"
+              :price="item.price"
+              :decription="item.decription"
+              :icon="item.icon"
+            />
+          </NuxtLink>
         </div>
       </div>
     </section>
     <!-- section6.. -->
     <section>
       <div
-        class="flex items-center justify-around mt-14 bg-[#FFF1E6] md:w-[1270px] md:h-[370px] w-[370px] h-[600px] md:ml-[70px] rounded-2xl"
+        class="flex items-center justify-around mt-14 bg-[#FFF1E6] md:w-[1470px] md:h-[390px] w-[370px] h-[600px] md:ml-[220px] rounded-2xl"
       >
         <div class="md:flex px-5 md:mt-[20px] text-center mt-[5px]">
           <img
@@ -122,19 +128,19 @@
           />
           <div class="px-10 md:ml-[200px]">
             <p
-              class="text-[#C85904] font-serif md:text-[40px] text-[24px] md:-ml-[520px]"
+              class="text-[#C85904] font-serif md:text-[40px] text-[24px] md:-ml-[260px]"
             >
               Exclusive offer
             </p>
             <div class="mt-8">
               <p
-                class="md:-ml-[200px] text-[#C85904] md:text-[20px] text-[14px]"
+                class="md:-ml-[200px] text-[#C85904] md:text-[18px] text-[14px]"
               >
                 Unlock the ultimate style upgrade with our exclusive offer Enjoy
                 savings of up to
               </p>
               <p
-                class="md:-ml-[520px] text-[#C85904] md:text-[18px] text-[12px]"
+                class="md:-ml-[320px] text-[#C85904] md:text-[18px] text-[12px]"
               >
                 40% off on our latest New Arrivals
               </p>
@@ -163,7 +169,7 @@
               </div>
             </div>
             <button
-              class="bg-[#FB8122] text-white md:px-[120px] px-10 p-2 rounded-full mt-6 md:-ml-[180px]"
+              class="bg-[#FB8122] text-white md:px-[60px] px-10 p-2 rounded-full mt-6 md:-ml-[180px]"
             >
               BUY NOW
             </button>
@@ -260,19 +266,19 @@
       <div
         class="bg-[#FFF1E6] w-full md:h-[400px] h-[560px] mt-3 md:flex md:justify-between items-center md:p-20 text-center p-10"
       >
-        <div class="flex -mt-5 md:gap-2 md:mt-5">
+        <div class="flex ml-6 -mt-5 md:gap-2 md:mt-5 md:ml-0">
           <div data-aos="fade-up">
             <img
               src="/shirt1.png"
               alt="shirt"
-              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-24"
+              class="md:w-[220px] md:h-[230px] w-[120px] h-[100px] mt-24"
             />
           </div>
           <div data-aos="fade-down">
             <img
               src="/shirt2.png"
               alt="shirt"
-              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-6"
+              class="md:w-[220px] md:h-[230px] w-[120px] h-[100px] mt-6"
             />
           </div>
         </div>
@@ -290,19 +296,19 @@
             Show Now
           </button>
         </div>
-        <div class="flex md:gap-2 md:mt-5">
+        <div class="flex ml-6 md:gap-2 md:mt-5 md:ml-0">
           <div data-aos="fade-down">
             <img
               src="/shirt3.png"
               alt="shirt"
-              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-6"
+              class="md:w-[220px] md:h-[230px] w-[120px] h-[100px] mt-6"
             />
           </div>
           <div data-aos="fade-up">
             <img
               src="/shirt4.png"
               alt="shirt"
-              class="md:w-[220px] md:h-[250px] w-[140px] h-[90px] mt-24"
+              class="md:w-[220px] md:h-[230px] w-[120px] h-[100px] mt-24"
             />
           </div>
         </div>
@@ -320,13 +326,221 @@
         :slidesPerView="3"
         :spaceBetween="30"
         :loop="true"
-        :pagination="{
-          clickable: true,
-        }"
+        :freeMode="true"
+        :pagination="{ clickable: true }"
         :navigation="true"
+        :autoplay="{
+          delay: 1000,
+          disableOnInteraction: false,
+        }"
+        :breakpoints="{
+          0: { slidesPerView: 1 },
+          768: { slidesPerView: 3 },
+        }"
         :modules="modules"
         class="mySwiper"
       >
+        >
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] md:mt-0 mt-3 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Victor Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col mt-2 md:mt-0 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+            <p class="md:text-[16px] text-[12px]">
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] md:mt-0 mt-3 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Victor Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col mt-2 md:mt-0 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+            <p class="md:text-[16px] text-[12px]">
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] md:mt-0 mt-3 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Victor Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col mt-2 md:mt-0 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+            <p class="md:text-[16px] text-[12px]">
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Wesly Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              The customer experience was exceptional from start to finish. The
+              website is user-friendly, the checkout process was smooth, and the
+              clothes I ordered fit perfectly. I'm beyond satisfied!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl p-5 gap-6 flex flex-col bg-[#FFF1E6] md:mt-0 mt-3 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Victor Raj</p>
+            <p class="md:text-[16px] text-[12px]">
+              I absolutely love the quality and style of the clothing I
+              purchased from this website. customer service was outstanding, and
+              I received my order quickly. Highly recommended!
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-md md:shadow-2xl p-5 gap-6 flex flex-col mt-2 md:mt-0 border"
+          >
+            <img
+              src="public/comma.png"
+              alt="camma"
+              class="md:w-[20px] md:h-[20px] w-[10px] h-[10px]"
+            />
+            <p class="text-[#C85904] md:text-[16px] text-[12px]">Jones</p>
+            <p class="md:text-[16px] text-[12px]">
+              I had a great experience shopping on this website. The clothes I
+              bought are fashionable and comfortable. Highly satisfied!
+            </p>
+          </div>
+        </swiper-slide>
         <swiper-slide>
           <div
             class="md:w-[420px] md:h-[230px] w-[340px] h-[210px] rounded-2xl shadow-2xl gap-6 p-5 flex flex-col border"

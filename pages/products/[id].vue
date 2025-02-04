@@ -6,7 +6,7 @@
     </section>
     <!-- section2.. -->
     <section class="py-3">
-      <div class="py-1 bg-[#190B00] opacity-60">
+      <div class="py-1 bg-[#190B00] opacity-60 overflow-hidden">
         <div
           class="flex slider gap-5 text-white w-full md:h-[30px] h-[15px] md:text-[20px] text-[12px]"
         >
@@ -156,48 +156,6 @@
           >
         </div>
       </div>
-      <!-- <div class="px-20 mt-8 border border-[#CBCBCB] bg-[#FFF1E6] p-3">
-        <div>
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-[20px]">Fitting</p>
-            <p class="text-[20px]">+</p>
-          </div>
-          <hr class="border boder-[#CBCBCB]" />
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-[20px] text-[#FB8122]">Fabric & care</p>
-            <p class="text-[20px] text-[#FB8122]">-</p>
-          </div>
-          <p>
-            Fabric : <br />
-            Pure Cotton <br />
-            Made in Tirupur-Tamil nadu , 100% Pure Cotton-210 GSM <br />
-            Care: <br />
-            Cold machine wash, line dry <br />
-            Do not tumble dry or dry clean, Do not use bleach or fabric softener
-          </p>
-        </div>
-        <div class="mt-6">
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-[20px]">Product Detail</p>
-            <p class="text-[20px]">+</p>
-          </div>
-          <hr class="border boder-[#CBCBCB]" />
-          <div class="flex items-center justify-between">
-            <p class="font-bold text-[20px] text-[#FB8122]">
-              Shipping And Return
-            </p>
-            <p class="text-[20px] text-[#FB8122]">-</p>
-          </div>
-          <p>
-            Shipping: <br />
-            is free on Tamil Nadu , All India orders are 50Rs extra <br />
-            Returns: <br />
-            Unwashed, unworn items are eligible for returns or exchanges within
-            30 days of purchase. Final Sale items are not eligible for returns
-            or exchanges.
-          </p>
-        </div>
-      </div> -->
     </section>
     <!-- section5.. -->
     <section>
@@ -266,6 +224,7 @@ export default {
           icon: "/colors4.png",
         },
       ],
+
       faqItems: [
         {
           title: "Fabric & Care",
