@@ -8,7 +8,7 @@
     <section class="py-3">
       <div class="py-1 bg-[#190B00] opacity-60 overflow-hidden">
         <div
-          class="flex slider gap-5 text-white w-full md:h-[30px] h-[15px] md:text-[20px] text-[12px]"
+          class="flex slider gap-5 text-white md:h-[30px] h-[15px] md:text-[20px] text-[12px]"
         >
           <p class="flex flex-none">Christmas offer 15% off</p>
           <p class="flex flex-none">Christmas offer 15% off</p>
@@ -29,15 +29,15 @@
         class="border-4 border-orange-600 rounded-full md:w-10 md:h-10 animate-spin border-r-gray-200"
       ></div>
     </section>
-    <section v-else>
-      <div class="gap-6 px-8 mt-8 md:flex">
+    <section v-else class="flex items-center justify-around">
+      <div class="gap-12 px-8 mt-8 md:flex">
         <div class="gap-3 h-[510px] overflow-hidden overflow-y-auto">
           <div v-for="(image, index) in product.images" :key="index">
             <img
               @click="changeImage(index)"
               :src="image"
               alt="buy1"
-              class="md:w-[125px] w-[80px] py-2 md:h-[160px] h-[100px]"
+              class="md:w-[100px] w-[80px] py-2 md:h-[160px] h-[100px]"
               :class="index === selectIndex ? 'opacity-100' : 'opacity-40'"
             />
           </div>
@@ -45,7 +45,7 @@
         <img
           :src="product.images[selectIndex]"
           alt="buy"
-          class="md:w-[450px] md:h-[510px] w-[200px] h-[300px] -mt-[470px] ml-[125px] md:-mt-0 md:ml-0"
+          class="md:w-[350px] md:h-[510px] w-[200px] h-[300px] -mt-[470px] ml-[125px] md:-mt-0 md:ml-0"
         />
         <div class="flex flex-col gap-8">
           <p
@@ -74,16 +74,35 @@
             </div>
           </div>
           <div class="flex flex-col w-full -mt-2 md:-mt-0">
-            <button
-              class="flex items-center justify-between p-2 px-4 mt-3 bg-white rounded-3xl drop-shadow-lg"
-            >
-              <p class="font-bold text-[12px]">Size</p>
-              <img
-                src="public/arrowbutton.png"
-                alt="arrow"
-                class="w-[25px] h-[25px]"
-              />
-            </button>
+            <div>
+              <button
+                @click="toggleDropdown"
+                class="flex items-center justify-between w-full p-2 px-4 mt-3 bg-white rounded-3xl drop-shadow-lg"
+              >
+                <p class="font-bold text-[12px]">Size</p>
+                <img
+                  src="public/arrowbutton.png"
+                  alt="arrow"
+                  class="w-[25px] h-[25px] transition-transform duration-300"
+                  :class="{ 'rotate-180': isDropdownOpen }"
+                />
+              </button>
+
+              <transition name="fade">
+                <div
+                  v-if="isDropdownOpen"
+                  class="p-3 mt-2 bg-white rounded-lg shadow-md"
+                >
+                  <p class="text-sm">xs (Very Samll)</p>
+                  <p class="text-sm">S (Small)</p>
+                  <p class="text-sm">M (Medium)</p>
+                  <p class="text-sm">L (Large)</p>
+                  <p class="text-sm">Xl (Very Large)</p>
+                  <p class="text-sm">2XL (2 Large)</p>
+                </div>
+              </transition>
+            </div>
+
             <button
               class="flex items-center justify-center p-2 px-4 mt-3 bg-[#FEE2CD] rounded-3xl drop-shadow-lg"
               @click="addToCart()"
@@ -128,7 +147,7 @@
     </section>
     <!-- section4.. -->
     <section>
-      <div class="p-6 mt-8 bg-orange-50">
+      <div class="px-16 py-4 mt-8 bg-orange-50">
         <div
           v-for="(item, index) in faqItems"
           :key="index"
@@ -147,7 +166,7 @@
             <p v-for="(line, i) in item.content" :key="i">{{ line }}</p>
           </div>
         </div>
-        <div class="flex justify-center mt-2">
+        <div class="flex justify-center mt-4">
           <a
             href="/Faq"
             class="text-[16px] font-semibold text-center mt-4 w-[120px] p-2 bg-orange-600 text-white rounded-3xl"
@@ -169,13 +188,15 @@
           class="items-center justify-around px-20 md:flex -ml-[30px] md:-ml-0"
         >
           <div v-for="item in buys" :key="item">
-            <Card
-              :image="item.image"
-              :title="item.title"
-              :price="item.price"
-              :decription="item.decription"
-              :icon="item.icon"
-            />
+            <NuxtLink :to="`/products/${index + 1}`">
+              <Card
+                :image="item.image"
+                :title="item.title"
+                :price="item.price"
+                :decription="item.decription"
+                :icon="item.icon"
+              />
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -193,6 +214,7 @@ export default {
   data() {
     return {
       selectIndex: 0,
+      isDropdownOpen: false,
       product: {},
       buys: [
         {
@@ -267,6 +289,9 @@ export default {
     toggle(index) {
       this.faqItems[index].open = !this.faqItems[index].open;
     },
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
   },
 };
 </script>
@@ -288,5 +313,14 @@ export default {
 <style scoped>
 button {
   transition: color 0.3s ease;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

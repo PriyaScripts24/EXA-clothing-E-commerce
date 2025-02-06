@@ -2,7 +2,7 @@
   <div>
     <section>
       <div
-        class="bg-[#321601] mt-2 md:flex justify-around items-center md:gap-2 md:h-[350px] text-center p-3"
+        class="bg-[#321601] mt-8 md:flex justify-around items-center md:gap-2 md:h-[350px] text-center p-3"
       >
         <div class="flex flex-col gap-8">
           <p class="font-bold md:text-[20px] text-[15px] text-white mt-4">
@@ -19,7 +19,7 @@
             <img
               src="/public/arrow.png"
               alt="arrow"
-              class="w-[10px] h-[5px]"
+              class="w-[15px] h-[10px]"
               @click="sendNotifcation()"
             />
           </div>

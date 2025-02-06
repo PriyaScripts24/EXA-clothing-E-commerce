@@ -70,12 +70,12 @@
       <div class="relative mt-4 md:mt-1">
         <img
           src="public/bg2.png"
-          class="w-full md:h-[290px] h-[120px]"
+          class="w-full md:h-[320px] h-[120px]"
           alt="bg"
         />
       </div>
       <div
-        class="absolute md:-mt-[150px] md:ml-[520px] -mt-[90px] ml-[90px] flex flex-col gap-3"
+        class="absolute md:-mt-[180px] md:ml-[760px] -mt-[90px] ml-[90px] flex flex-col gap-3"
       >
         <p class="font-medium md:text-[32px] text-[14px] text-center">
           Follow us on social for more

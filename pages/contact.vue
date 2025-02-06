@@ -13,7 +13,7 @@
     <!-- section2.. -->
     <section>
       <div
-        class="bg-[#FFF1E6] flex flex-col md:gap-9 gap-3 justify-start items-start md:px-[120px] px-5 mt-3 py-5"
+        class="bg-[#FFF1E6] flex flex-col md:gap-9 gap-3 justify-center items-center md:px-[120px] px-5 mt-3 py-5"
       >
         <p
           class="font-[400px] md:text-[20px] text-[12px] flex flex-col justify-between gap-6"
@@ -41,7 +41,7 @@
     <!-- section3... -->
     <section>
       <div>
-        <div class="flex gap-3 md:ml-[790px] ml-[120px] mt-5">
+        <div class="flex justify-center gap-3 mt-5">
           <img src="/mail.png" alt="mail" class="w-[25px] h-[25px]" />
           <p class="font-bold text-[24px] -mt-1">Write Us</p>
         </div>
@@ -53,20 +53,20 @@
               v-model="formData.firstName"
               type="text"
               placeholder="First Name"
-              class="border border-black p-1 text-gray-600 md:w-[420px] px-16 md:px-0"
+              class="border border-black p-1 text-gray-600 md:w-[420px] px-16 md:px-5"
             />
             <input
               v-model="formData.lastName"
               type="text"
               placeholder="Last Name"
-              class="border border-black p-1 text-gray-600 md:w-[420px] mt-4 md:mt-0 px-16 md:px-0"
+              class="border border-black p-1 text-gray-600 md:w-[420px] mt-4 md:mt-0 px-16 md:px-5"
             />
           </div>
           <input
             v-model="formData.email"
             type="text"
             placeholder="Enter Your Email"
-            class="border border-black p-1 text-gray-600 md:w-[920px] px-16 md:px-0 -mt-2 md:-mt-0"
+            class="border border-black p-1 text-gray-600 md:w-[920px] px-16 md:px-5 -mt-2 md:-mt-0"
           />
           <div>
             <textarea
@@ -76,12 +76,12 @@
               cols="30"
               rows="10"
               placeholder="Enter Your Address"
-              class="border border-black p-1 text-gray-600 md:w-[920px] px-12 md:px-0 -mt-2 md:-mt-0 md:h-[200px] h-[140px]"
+              class="border border-black p-1 text-gray-600 md:w-[920px] px-12 md:px-5 -mt-2 md:-mt-0 md:h-[200px] h-[140px]"
             ></textarea>
           </div>
         </div>
         <button
-          class="bg-[#FB8122] rounded-full p-2 text-white px-9 md:mt-8 mt-3 md:ml-[790px] ml-[140px]"
+          class="bg-[#FB8122] rounded-full p-2 text-white px-9 md:mt-8 mt-3 items-center justify-center flex mx-auto"
           @click="submit()"
         >
           Submit
@@ -97,7 +97,7 @@
           allowfullscreen="false"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="md:px-[100px] mt-10 md:w-[1700px] md:h-[550px] w-[320px] h-[220px] ml-7 md:mt-0"
+          class="md:px-[100px] mt-10 md:w-[1700px] md:h-[550px] w-[320px] h-[220px] ml-7 md:mt-10 md:ml-[100px]"
         ></iframe>
       </div>
     </section>
@@ -118,11 +118,12 @@
           <p class="font-[400px] md:text-[12px] text-[10px]">
             We are here and ready to chat
           </p>
-          <button
+          <a
+            href="https://wa.me/916374959477?text=hello"
             class="border border-[#FB8122] md:px-[100px] px-[50px] md:p-2 p-1 md:text-[16px] text-[12px] text-[#FB8122]"
           >
             Start chat
-          </button>
+          </a>
         </div>
         <div
           class="bg-[#FFF1E6] md:w-[400px] md:h-[150px] w-[340px] h-[140px] mt-3 md:mt-0 rounded-2xl flex flex-col justify-center items-center gap-2"
@@ -136,11 +137,12 @@
           <p class="font-[400px] md:text-[12px] text-[10px]">
             We're here to Talk to You
           </p>
-          <button
+          <a
+            href="tel:+917418520963"
             class="border border-[#FB8122] md:px-[100px] px-[50px] md:p-2 p-1 md:text-[16px] text-[12px] text-[#FB8122]"
           >
             +91 7418520963
-          </button>
+          </a>
         </div>
         <div
           class="bg-[#FFF1E6] md:w-[400px] md:h-[150px] w-[340px] h-[140px] mt-3 md:mt-0 rounded-2xl flex flex-col justify-center items-center gap-2"
@@ -154,11 +156,12 @@
           <p class="font-[400px] md:text-[12px] text-[10px]">
             You are welcome to send us an email
           </p>
-          <button
+          <a
+            href="mailto:someone@example.com"
             class="border border-[#FB8122] md:px-[100px] px-[50px] md:p-2 p-1 md:text-[16px] text-[12px] text-[#FB8122]"
           >
             Send Email
-          </button>
+          </a>
         </div>
       </div>
     </section>

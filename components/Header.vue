@@ -14,8 +14,8 @@
           alt="logo"
           class="w-[80px] h-[60px] hidden md:block"
         />
-        <div class="hidden md:block">
-          <nav class="flex justify-center w-full gap-6 mt-8 flex-">
+        <div class="hidden w-full md:block">
+          <nav class="flex justify-center gap-12 mt-8 flex-">
             <a
               v-for="menu in nav"
               :key="menu.name"

@@ -52,5 +52,9 @@
         </div>
       </div>
     </section>
+    <!-- section3.. -->
+    <section class="-mt-4">
+      <Footer></Footer>
+    </section>
   </div>
 </template>
