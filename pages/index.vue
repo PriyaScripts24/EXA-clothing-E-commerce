@@ -8,7 +8,7 @@
         <img
           src="/background.png"
           alt="background"
-          class="w-full mt-1 md:mt-4 h-[180px] md:h-[600px]"
+          class="w-full mt-1 md:mt-4 h-[180px] md:h-[700px]"
         />
       </div>
     </section>
@@ -16,7 +16,9 @@
     <section>
       <div class="flex items-center justify-between px-4 mt-2 md:px-16">
         <p class="font-bold md:text-[35px] text-[24px]">New Arrivals</p>
-        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
+        <a href="/products" class="font-bold md:text-[17px] text-[10px]"
+          >View all</a
+        >
       </div>
       <div class="items-center px-12 md:justify-around md:flex md:px-0">
         <div v-for="(item, index) in arrivals" :key="index">
@@ -37,7 +39,9 @@
     <section>
       <div class="flex items-center justify-between px-4 mt-2 md:px-16">
         <p class="font-bold md:text-[35px] text-[24px]">Oversize T-shirt</p>
-        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
+        <a href="/products" class="font-bold md:text-[17px] text-[10px]"
+          >View all</a
+        >
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="(item, index) in oversize" :key="index">
@@ -59,7 +63,9 @@
         <p class="font-bold md:text-[35px] text-[24px]">
           Drop Shoulder T-Shirt
         </p>
-        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
+        <a href="/products" class="font-bold md:text-[17px] text-[10px]"
+          >View all</a
+        >
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="(item, index) in products" :key="index">
@@ -79,7 +85,9 @@
     <section>
       <div class="flex items-center justify-between px-4 mt-2 md:px-16">
         <p class="font-bold md:text-[35px] text-[24px]">Printed Shirts</p>
-        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
+        <a href="/products" class="font-bold md:text-[17px] text-[10px]"
+          >View all</a
+        >
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="(item, index) in docus" :key="index">
@@ -99,7 +107,9 @@
     <section>
       <div class="flex items-center justify-between px-4 mt-2 md:px-16">
         <p class="font-bold md:text-[35px] text-[24px]">Printed Shorts</p>
-        <p class="font-bold md:text-[17px] text-[10px]">View all</p>
+        <a href="/products" class="font-bold md:text-[17px] text-[10px]"
+          >View all</a
+        >
       </div>
       <div class="items-center px-12 md:flex md:justify-around md:px-0">
         <div v-for="(item, index) in types" :key="index">
@@ -180,7 +190,7 @@
     <!-- section7.. -->
     <section>
       <p
-        class="font-serif font-medium md:text-[44px] text-[24px] overflow- text-center mt-4 text-[#FB8122]"
+        class="font-serif font-medium md:text-[44px] text-[24px] overflow- text-center mt-6 text-[#FB8122]"
       >
         Shop By Fandom
       </p>
@@ -290,11 +300,13 @@
             for all new product purchases <br />
             &nbsp;&nbsp;&nbsp;&nbsp;min purchase Rs : 1500/-
           </p>
-          <button
+          <a
+            href="/products"
             class="bg-[#FB8122] text-white px-3 p-2 rounded-full md:text-[16px] text-[10px] mt-5"
           >
-            Show Now
-          </button>
+            Show Now</a
+          >
+          <button></button>
         </div>
         <div class="flex ml-6 md:gap-2 md:mt-5 md:ml-0">
           <div data-aos="fade-down">

@@ -8,55 +8,39 @@
           Enjoy Free Shipping On All Orders
         </p>
       </div>
-      <div
-        class="flex items-center justify-between px-3 mt-2 md:justify-around md:mt-4"
-      >
+      <div class="flex items-center justify-between px-3 mt-2 md:px-12 md:mt-4">
         <img
           src="/logo.png"
           alt="logo"
-          class="w-[60px] h-[60px] hidden md:block"
+          class="w-[80px] h-[60px] hidden md:block"
         />
+        <div class="hidden md:block">
+          <nav class="flex justify-center w-full gap-6 mt-8 flex-">
+            <a
+              v-for="menu in nav"
+              :key="menu.name"
+              :href="menu.path"
+              class="font-medium text-lg hover:text-[#321601]"
+              :class="
+                !getRoute(menu.path) ? 'text-[#321601]' : 'text-[#FB8122]'
+              "
+              >{{ menu.name }}</a
+            >
+          </nav>
+        </div>
         <div id="app">
           <header :class="{ sticky: isSticky }">
-            <div id="menu-icon" :class="{ 'bx-x': isMenuOpen }">
+            <div id="menu-icon" class="relative">
               <img
                 src="/menu.png"
                 alt="menu"
-                class="w-[40px] h[40px] md:hidden block"
+                class="w-[40px] h-[40px] md:hidden block cursor-pointer"
                 @click="toggleMenu"
               />
-              <div class="hidden md:block">
-                <nav class="flex gap-6 md:gap-16">
-                  <a
-                    href="/"
-                    class="font-medium md:text-[18px] text-[10px] text-[#FB8122] hover:text-[#321601]"
-                    >Home</a
-                  >
-                  <a
-                    href="/sales"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
-                    >Sale</a
-                  >
-                  <a
-                    href="/products"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
-                    >Product</a
-                  >
-                  <a
-                    href="/about"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
-                    >About us</a
-                  >
-                  <a
-                    href="/contact"
-                    class="font-medium md:text-[18px] text-[10px] text-[#321601] hover:text-[#FB8122]"
-                    >Contact</a
-                  >
-                </nav>
-              </div>
             </div>
           </header>
         </div>
+
         <div class="flex gap-3">
           <img
             src="/profile.png"
@@ -80,16 +64,32 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col gap-3" :class="isMenuOpen ? 'block' : 'hidden'">
-        <div v-for="(item, index) in nav" :key="index">
-          <NuxtLink :to="item.path">
-            <h1 :class="getRoute(item.path) ? 'text-red-600' : ''">
-              {{ item.name }}
-            </h1>
-          </NuxtLink>
+
+      <!-- Mobile Navigation with Slide Animation -->
+      <transition name="slide">
+        <div
+          v-if="isMenuOpen"
+          class="fixed top-0 left-0 z-50 w-64 h-full p-5 bg-black shadow-lg md:hidden"
+        >
+          <button class="absolute text-xl top-4 right-4" @click="toggleMenu">
+            ✖
+          </button>
+          <nav class="flex flex-col gap-6 mt-8">
+            <a
+              v-for="menu in nav"
+              :key="menu.name"
+              :href="menu.path"
+              class="font-medium text-lg hover:text-[#321601]"
+              :class="
+                !getRoute(menu.path) ? 'text-[#321601]' : 'text-[#FB8122]'
+              "
+              >{{ menu.name }}</a
+            >
+          </nav>
         </div>
-      </div>
+      </transition>
     </section>
+
     <div
       v-if="entryform"
       class="fixed inset-0 z-50 flex items-center justify-center"
@@ -395,5 +395,14 @@ export default {
 <style>
 .no-scroll {
   overflow: hidden;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(-100%);
 }
 </style>

@@ -16,7 +16,12 @@
               placeholder="Enter Your Email Address"
               class="text-[#FFFFFF] md:text-[16px] text-[12px] bg-[#321601]"
             />
-            <img src="/public/arrow.png" alt="arrow" class="w-[10px] h-[5px]" />
+            <img
+              src="/public/arrow.png"
+              alt="arrow"
+              class="w-[10px] h-[5px]"
+              @click="sendNotifcation()"
+            />
           </div>
           <div class="flex gap-2 ml-7 md:ml-8">
             <input
@@ -88,3 +93,24 @@
     </section>
   </div>
 </template>
+<script>
+import axios from "axios";
+import { Notivue, Notification, push } from "notivue";
+export default {
+  data() {
+    return {
+      push,
+    };
+  },
+  mounted() {},
+  methods: {
+    sendNotifcation() {
+      this.push.success({
+        title: "Notification",
+        message: "You have successfully subscribed to our newsletter",
+        type: "success",
+      });
+    },
+  },
+};
+</script>

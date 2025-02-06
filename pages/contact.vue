@@ -50,13 +50,13 @@
         >
           <div class="md:flex md:gap-20">
             <input
-              v-model="formData.name"
+              v-model="formData.firstName"
               type="text"
               placeholder="First Name"
               class="border border-black p-1 text-gray-600 md:w-[420px] px-16 md:px-0"
             />
             <input
-              v-model="formData.name"
+              v-model="formData.lastName"
               type="text"
               placeholder="Last Name"
               class="border border-black p-1 text-gray-600 md:w-[420px] mt-4 md:mt-0 px-16 md:px-0"
@@ -65,17 +65,17 @@
           <input
             v-model="formData.email"
             type="text"
-            placeholder="Enter Your Email Address"
+            placeholder="Enter Your Email"
             class="border border-black p-1 text-gray-600 md:w-[920px] px-16 md:px-0 -mt-2 md:-mt-0"
           />
           <div>
             <textarea
-              v-model="formData.email"
+              v-model="formData.address"
               name=""
               id=""
               cols="30"
               rows="10"
-              placeholder="Enter Your Email Address"
+              placeholder="Enter Your Address"
               class="border border-black p-1 text-gray-600 md:w-[920px] px-12 md:px-0 -mt-2 md:-mt-0 md:h-[200px] h-[140px]"
             ></textarea>
           </div>
@@ -175,7 +175,8 @@ export default {
   data() {
     return {
       formData: {
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: "",
       },
