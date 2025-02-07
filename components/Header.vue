@@ -80,9 +80,7 @@
               :key="menu.name"
               :href="menu.path"
               class="font-medium text-lg hover:text-[#321601]"
-              :class="
-                !getRoute(menu.path) ? 'text-[#321601]' : 'text-[#FB8122]'
-              "
+              :class="!getRoute(menu.path) ? 'text-white' : 'text-[#FB8122]'"
               >{{ menu.name }}</a
             >
           </nav>
