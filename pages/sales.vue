@@ -126,29 +126,25 @@
             </div>
           </div>
         </div>
-        <div class="md:flex gap-20 ml-[60px] mt-10 justify-center">
-          <div>
-            <img
-              src="/sale1.png"
-              alt="sale"
-              class="w-[250px] h-[380px]rounded-tl-2xl"
-            />
-            <div class="p-2 bg-slate-400 rounded-b-2xl">
-              <p class="text-[12px] text-center">front Printed T-Shirt</p>
-              <p class="font-bold text-center">UPTO 20%</p>
-            </div>
-          </div>
-          <div class="mt-5 md:mt-0">
-            <div class="">
-              <div class="p-2 bg-slate-400 rounded-t-2xl">
+        <div class="">
+          <div class="flex flex-wrap justify-center gap-10 mt-10">
+            <div class="w-[250px]">
+              <img src="/sale1.png" alt="sale" class="rounded-tl-2xl" />
+              <div class="p-2 bg-slate-400 rounded-b-2xl">
                 <p class="text-[12px] text-center">front Printed T-Shirt</p>
                 <p class="font-bold text-center">UPTO 20%</p>
               </div>
-              <img
-                src="/sale2.png"
-                alt="sale"
-                class="w-[250px] h-[380px]rounded-tl-2xl"
-              />
+            </div>
+            <div class="">
+              <div class="flex flex-col-reverse md:flex-col w-[250px]">
+                <div
+                  class="p-2 bg-slate-400 rounded-b-2xl md:rounded-t-2xl md:rounded-b-none"
+                >
+                  <p class="text-[12px] text-center">front Printed T-Shirt</p>
+                  <p class="font-bold text-center">UPTO 20%</p>
+                </div>
+                <img src="/sale2.png" alt="sale" class="rounded-t-2xl" />
+              </div>
             </div>
           </div>
         </div>

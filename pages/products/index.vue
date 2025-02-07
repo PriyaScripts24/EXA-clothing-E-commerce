@@ -9,10 +9,21 @@
         >
           Our Products
         </p>
+        <section class="justify-center md:flex" v-if="isloading === true">
+          <div
+            class="border-4 border-orange-600 rounded-full md:w-10 md:h-10 animate-spin border-r-gray-200"
+          ></div>
+        </section>
         <div
+          v-else
           class="flex-wrap items-center justify-center gap-40 px-8 mt-10 ml-12 text-center md:flex md:ml-0"
         >
-          <div v-for="item in products" :key="item">
+          <div v-if="products.length === 0">
+            <p class="text-[24px] text-[#FB8122] font-semibold">
+              No products found
+            </p>
+          </div>
+          <div v-else v-for="item in products" :key="item">
             <nuxtLink :to="`/products/${item.id}`">
               <img
                 :src="item.images[0]"
@@ -39,6 +50,7 @@ export default {
   data() {
     return {
       products: [],
+      isloading: true,
     };
   },
   mounted() {
@@ -48,6 +60,7 @@ export default {
     async getProducts() {
       const response = await axios.get("/api/products");
       this.products = response.data.products;
+      this.isloading = false;
     },
   },
 };
