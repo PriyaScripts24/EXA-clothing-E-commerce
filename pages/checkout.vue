@@ -6,10 +6,12 @@
     </section>
     <!-- section2.. -->
     <section>
-      <div class="flex flex-wrap justify-center gap-20 mt-20">
-        <div class="flex-col gap-20 p-5 px-20 border md:flex mt-14">
+      <div class="flex flex-wrap justify-center gap-20 md:mt-20">
+        <div class="flex-col gap-20 p-5 px-5 md:px-20 md:border md:flex mt-14">
           <div class="form-container">
-            <h2 class="font-bold text-[18px]">Billing Address</h2>
+            <h2 class="font-bold text-[18px] text-[#FB8122]">
+              Billing Address
+            </h2>
 
             <label for="country">Country</label>
             <select v-model="form.country" id="country">
@@ -54,7 +56,9 @@
             <button @click="submitForm">Submit</button>
           </div>
           <div class="w-[310px] mt-10">
-            <h2 class="text-lg font-bold">Contact information</h2>
+            <h2 class="text-lg font-bold text-[#FB8122]">
+              Contact information
+            </h2>
 
             <form @pay.prevent="payForm">
               <div class="mb-4">
@@ -99,16 +103,19 @@
           </div>
         </div>
         <div>
-          <div class="max-w-md p-6 mx-auto mt-10 bg-white rounded-lg shadow-lg">
-            <!-- Amount -->
-            <h2 class="mb-2 text-3xl font-semibold text-center">$200.00</h2>
-            <button class="block mx-auto mb-4 text-blue-500 underline">
+          <div
+            class="p-6 bg-white md:mt-10 md:rounded-lg md:shadow-lg md:max-w-md md:mx-auto"
+          >
+            <h2 class="mb-2 text-xl font-semibold text-center md:text-3xl">
+              $200.00
+            </h2>
+            <button
+              class="block mb-4 text-lg text-blue-500 underline md:mx-auto md:text-2xl -px-4"
+            >
               View detailed order
             </button>
 
-            <!-- Payment Options -->
             <div class="space-y-4">
-              <!-- Credit/Debit Card -->
               <div class="p-4 border rounded-lg">
                 <label class="flex items-center space-x-2">
                   <input type="radio" v-model="paymentMethod" value="card" />
@@ -162,7 +169,6 @@
                 </div>
               </div>
 
-              <!-- PayPal -->
               <div class="p-4 border rounded-lg">
                 <label class="flex items-center space-x-2">
                   <input type="radio" v-model="paymentMethod" value="paypal" />
@@ -183,11 +189,10 @@
               </div>
             </div>
 
-            <!-- Place Order Button -->
-            <div class="mt-6 px-[120px]">
+            <div class="mt-6 md:px-[120px]">
               <nuxt-link
                 to="/pay"
-                class="w-full p-5 px-8 py-2 mt-4 text-white bg-black rounded-lg hover:bg-gray-800"
+                class="p-5 px-8 py-2 mt-4 ml-24 text-white bg-black rounded-lg md:ml-0 hover:bg-gray-800"
                 @click="placeOrder"
                 >Place Order</nuxt-link
               >
