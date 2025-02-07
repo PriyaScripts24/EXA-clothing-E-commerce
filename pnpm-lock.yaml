@@ -20,6 +20,9 @@ importers:
       google-font:
         specifier: ^1.0.1
         version: 1.0.1
+      gsap:
+        specifier: ^3.12.7
+        version: 3.12.7
       intl-dateformat:
         specifier: ^0.1.4
         version: 0.1.4
@@ -48,6 +51,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.16
         version: 3.4.16
+      tailwindcss-animated:
+        specifier: ^2.0.0
+        version: 2.0.0(tailwindcss@3.4.16)
 
 packages:
 
@@ -1717,6 +1723,9 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
+  gsap@3.12.7:
+    resolution: {integrity: sha512-V4GsyVamhmKefvcAKaoy0h6si0xX7ogwBoBSs2CTJwt7luW0oZzC0LhdkyuKV8PJAXr7Yaj8pMjCKD4GJ+eEMg==}
+
   gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -2854,6 +2863,11 @@ packages:
   system-architecture@0.1.0:
     resolution: {integrity: sha512-ulAk51I9UVUyJgxlv9M6lFot2WP3e7t8Kz9+IS6D4rVba1tR9kON+Ey69f+1R4Q8cd45Lod6a4IcJIxnzGc/zA==}
     engines: {node: '>=18'}
+
+  tailwindcss-animated@2.0.0:
+    resolution: {integrity: sha512-anNNGpxNgjydD8p1lcJjxxH+XbjW6KR8Xs29owTrbcf3tOJ6IRblpyFob43HBkfxFJJTAfFQqugoEG2b1EsR0A==}
+    peerDependencies:
+      tailwindcss: '>=3.1.0 || >=4.0.0'
 
   tailwindcss@3.4.16:
     resolution: {integrity: sha512-TI4Cyx7gDiZ6r44ewaJmt0o6BrMCT5aK5e0rmJ/G9Xq3w7CX/5VXl/zIPEJZFUK5VEqwByyhqNPycPlvcK4ZNw==}
@@ -5066,6 +5080,8 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
+  gsap@3.12.7: {}
+
   gzip-size@7.0.0:
     dependencies:
       duplexer: 0.1.2
@@ -6314,6 +6330,10 @@ snapshots:
   swiper@11.1.15: {}
 
   system-architecture@0.1.0: {}
+
+  tailwindcss-animated@2.0.0(tailwindcss@3.4.16):
+    dependencies:
+      tailwindcss: 3.4.16
 
   tailwindcss@3.4.16:
     dependencies:

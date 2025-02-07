@@ -198,11 +198,11 @@
                 {{ getTotalPrice() }}/-
               </p>
             </div>
-            <button
-              class="bg-black text-white font-[400px] md:text-[14px] text-[12px] p-2 text-center rounded-md"
-            >
-              CONTINUE TO CHECKOUT
-            </button>
+            <nuxt-link
+              to="/checkout"
+              class="bg-black text-white font-[400px] text-[14px] p-2 text-center"
+              >CONTINUE To CONTINUE
+            </nuxt-link>
             <p class="font-[400px] md:text-[12px] text-[10px] text-center">
               Get it now before it sells out.
             </p>
