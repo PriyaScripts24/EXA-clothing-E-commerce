@@ -616,37 +616,37 @@
         <div class="flex items-center justify-center gap-10 mt-10 md:gap-20">
           <img
             src="public/gpay.png"
-            class="md:w-[80px] md:h-[50px] w-[80px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[80px] h-[40px] object-contain"
             alt="gpay"
           />
           <img
             src="public/phonepe.png"
-            class="md:w-[80px] md:h-[50px] w-[100px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[100px] h-[40px] object-contain"
             alt="phonepe"
           />
           <img
             src="public/paytm.png"
-            class="md:w-[80px] md:h-[50px] w-[90px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[90px] h-[40px] object-contain"
             alt="paytm"
           />
           <img
             src="public/master card.png"
-            class="md:w-[80px] md:h-[50px] w-[80px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[80px] h-[40px] object-contain"
             alt="mastercard"
           />
           <img
             src="public/amazonpay.png"
-            class="md:w-[80px] md:h-[50px] w-[100px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[100px] h-[40px] object-contain"
             alt="amazonpay"
           />
           <img
             src="public/paypal.png"
-            class="md:w-[80px] md:h-[50px] w-[100px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[100px] h-[40px] object-contain"
             alt="paypal"
           />
           <img
             src="public/pay.png"
-            class="md:w-[80px] md:h-[50px] w-[80px] h-[40px]"
+            class="md:w-[120px] md:h-[50px] w-[80px] h-[40px] object-contain"
             alt="pay"
           />
         </div>
